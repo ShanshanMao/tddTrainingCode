@@ -17,6 +17,14 @@ public class itemTest {
         assertThat(item.quality,is(21));
         item.passOneDay();
         assertThat(item.quality,is(23));
+    }
 
+    @Test
+    public void should_treble_increase_backstage_pass_value_when_getting_close_to_expiration(){
+        Item item = createBackstagePass(6,29);
+        item.passOneDay();
+        assertThat(item.quality,is(31));
+        item.passOneDay();
+        assertThat(item.quality,is(34));
     }
 }

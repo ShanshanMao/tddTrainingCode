@@ -9,13 +9,12 @@ import static com.giledeRose.Item.createBackstagePass;
 import static com.giledeRose.Item.createNormalItem;
 
 public class application {
-
     public static void main(String[] args){
         String baseline = getBaseline(args);
         System.out.println(baseline);
     }
 
-    public static void getBaseline() {
+    public static String getBaseline(String[] args) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(out);
         printStream.println("InventoryInfo!");
@@ -50,6 +49,9 @@ public class application {
 
         System.out.println(baseline);
 
+
+        return baseline;
     }
+
 
 }
