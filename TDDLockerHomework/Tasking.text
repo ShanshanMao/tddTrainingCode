@@ -1,0 +1,29 @@
+题目：
+实现储物柜（Locker）可以存包，取包
+作业要求
+todo - 产出Tasking列表
+todo - 按照TDD的方式实现需求
+todo - 小步提交，commit信息表意
+todo - 最后只需要提交Github地址
+
+Tasking:
+
+Given: 储物柜（locker）未满
+When: 存一个包
+Then: 存包成功，返回小票
+
+Given: 储物柜（locker）已满
+When: 存一个包
+Then: 存包失败，提示储物柜已满，不能存包
+
+Given: 拿着有效小票到储物柜（locker）
+When: 取一个包
+Then: 取包成功
+
+Given：拿着已使用小票到储物柜（locker）
+When：取一个包
+Then：取包失败，提示票已作废
+
+Given：拿着伪造小票到储物柜（locker）
+When：取一个包
+Then：取包失败，提示小票非法，取包失败
