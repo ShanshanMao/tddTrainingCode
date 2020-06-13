@@ -5,9 +5,12 @@ package com.LockertTest;
 
 import com.tdd.Locker.Locker;
 import com.tdd.Locker.SavePackageFailException;
+import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.nio.channels.FileLockInterruptionException;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.CoreMatchers.instanceOf;
@@ -49,11 +52,28 @@ public class LockerTest {
     }
 
     @Test
-    public void should_open_a_locker_when_pick_a_package_given_ticket_available(){
+    public void should_open_a_locker_success_when_pick_a_package_given_ticket_available(){
         locker.setUsedCount(9);
-        String usedTicket = locker.save();
+        String availableTicket = locker.save();
 
-        boolean success = locker.get(usedTicket);
+        boolean success = locker.get(availableTicket);
         assertTrue(success);
+    }
+
+    @Test
+    public void should_open_a_locker_fail_when_pick_a_package_given_a_repeat_ticket(){
+        locker.setUsedCount(9);
+        String repeatTicket = locker.save();
+        locker.get(repeatTicket);
+
+        try{
+            locker.get(repeatTicket);
+            Assert.fail("Should throw an exception");
+        }catch (pickPackageFailException e){
+            assertThat(e,is(instanceOf(pickPackageFailException.class)));
+            assertThat(e.getMessage(),is("Failed to collect the parcel, the ticket is invalid！"));
+        }
+
+
     }
 }
