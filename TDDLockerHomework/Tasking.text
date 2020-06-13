@@ -8,7 +8,8 @@ todo - 最后只需要提交Github地址
 
 Tasking:
 
-Given: 储物柜（locker）未满
+Given: 储物柜（locker）
+未满
 When: 存一个包
 Then: 存包成功，返回小票
 

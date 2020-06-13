@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac65864c-0611-470c-8a06-c78d19df1daf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SavePackageFailException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java" afterDir="false" />
     </list>
@@ -63,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+            <state relative-caret-position="1008">
+              <caret line="56" column="28" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,29 +73,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="421">
+              <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
               <folding>
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#231#232#0" expanded="true" />
+                <element signature="imports" expanded="true" />
                 <element signature="e#295#296#0" expanded="true" />
                 <element signature="e#348#349#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SavePackageFailException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-              <folding>
-                <element signature="e#213#214#0" expanded="true" />
-                <element signature="e#240#241#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,9 +123,9 @@
         <option value="$PROJECT_DIR$/tddExample/src/test/java/com/tdd/taxi/TaxiTest.java" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/Tasking.text" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/SavePackageFailException.java" />
+        <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SavePackageFailException.java" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java" />
-        <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SavePackageFailException.java" />
       </list>
     </option>
   </component>
@@ -259,7 +243,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592013214987" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592033489540" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -287,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LockerTest.should_open_a_locker_fail_when_save_a_package_given_locker_is_full">
+  <component name="RunManager" selected="JUnit.LockerTest.should_open_a_locker_when_pick_a_package_given_ticket_available">
     <configuration name="LockerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TDDLockerHomework" />
       <extension name="coverage">
@@ -313,6 +297,22 @@
       <option name="PACKAGE_NAME" value="com.LockertTest" />
       <option name="MAIN_CLASS_NAME" value="com.LockertTest.LockerTest" />
       <option name="METHOD_NAME" value="should_open_a_locker_fail_when_save_a_package_given_locker_is_full" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LockerTest.should_open_a_locker_when_pick_a_package_given_ticket_available" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TDDLockerHomework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.LockertTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.LockertTest" />
+      <option name="MAIN_CLASS_NAME" value="com.LockertTest.LockerTest" />
+      <option name="METHOD_NAME" value="should_open_a_locker_when_pick_a_package_given_ticket_available" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -348,36 +348,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="itemTest.should_double_increase_backstage_pass_value_when_getting_close_to_expiration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TDDTrianCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.GiledeRose.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.GiledeRose" />
-      <option name="MAIN_CLASS_NAME" value="com.GiledeRose.itemTest" />
-      <option name="METHOD_NAME" value="should_double_increase_backstage_pass_value_when_getting_close_to_expiration" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.itemTest.should_double_increase_backstage_pass_value_when_getting_close_to_expiration" />
       <item itemvalue="JUnit.TaxiTest.shoule_be_0p8yuan_when_distance_is_1km" />
       <item itemvalue="JUnit.TaxiTest" />
       <item itemvalue="JUnit.LockerTest" />
       <item itemvalue="JUnit.LockerTest.should_open_a_locker_fail_when_save_a_package_given_locker_is_full" />
+      <item itemvalue="JUnit.LockerTest.should_open_a_locker_when_pick_a_package_given_ticket_available" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LockerTest.should_open_a_locker_fail_when_save_a_package_given_locker_is_full" />
+        <item itemvalue="JUnit.LockerTest.should_open_a_locker_when_pick_a_package_given_ticket_available" />
         <item itemvalue="JUnit.LockerTest" />
+        <item itemvalue="JUnit.LockerTest.should_open_a_locker_fail_when_save_a_package_given_locker_is_full" />
         <item itemvalue="JUnit.TaxiTest" />
         <item itemvalue="JUnit.TaxiTest.shoule_be_0p8yuan_when_distance_is_1km" />
-        <item itemvalue="JUnit.itemTest.should_double_increase_backstage_pass_value_when_getting_close_to_expiration" />
       </list>
     </recent_temporary>
   </component>
@@ -415,6 +399,12 @@
     </history-entry>
     <history-entry file="LockerTest_should_open_a_locker_fail_when_save_a_package_given_locker_is_full - 2020.06.13 at 09h 51m 38s.xml">
       <configuration name="LockerTest.should_open_a_locker_fail_when_save_a_package_given_locker_is_full" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LockerTest - 2020.06.13 at 09h 55m 40s.xml">
+      <configuration name="LockerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LockerTest_should_open_a_locker_when_pick_a_package_given_ticket_available - 2020.06.13 at 15h 30m 22s.xml">
+      <configuration name="LockerTest.should_open_a_locker_when_pick_a_package_given_ticket_available" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -553,25 +543,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java">
+    <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        <state relative-caret-position="421">
+          <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java">
+    <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="1008">
+          <caret line="56" column="28" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
           <folding>
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
