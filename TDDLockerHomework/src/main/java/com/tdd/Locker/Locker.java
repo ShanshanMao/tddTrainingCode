@@ -15,12 +15,17 @@ public class Locker {
         this.LockerUsedCount = LockerUsedCount;
     }
 
-    public String save() {
+
+    public String save()  {
+        if (LockerUsedCount >= LockerCount){
+            throw new SavePackageFailException("Lockers are fulled,save package failure!");
+        }
+
         String ticket = "010";
         LockerUsedCount++;
 
         return ticket;
+        }
+
     }
 
-
-}
