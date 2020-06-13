@@ -10,11 +10,11 @@ public class Locker {
     private List<String> repeatTickets;
     private int LockerUsedCount;
     private int LockerCount;
-    private List<String> tickets;
+    private List<String> illegalTicket;
 
     public Locker(int LockerCount) {
         this.LockerCount = LockerCount;
-        this.tickets = new ArrayList<String>();
+        this.illegalTicket = new ArrayList<String>();
         this.repeatTickets = new ArrayList<String>();
     }
 
@@ -28,6 +28,7 @@ public class Locker {
         }
 
         String ticket = "010";
+        repeatTickets.add(ticket);
         LockerUsedCount++;
 
         return ticket;
@@ -35,14 +36,16 @@ public class Locker {
 
     public boolean get(String ticket){
 
-        if (repeatTickets.contains(ticket)) {
+        if (!repeatTickets.contains(ticket)) {
             throw new pickPackageFailException("Failed to collect the parcel, the ticket have been used！");
         }
-        repeatTickets.add(ticket);
+        if (illegalTicket.contains(ticket) ){
+            throw new pickPackageFailException("Failed to collect the package, the ticket is illegal! ");
+        }
+        illegalTicket.add(ticket);
 
         return true;
-
     }
 
-    }
+}
 

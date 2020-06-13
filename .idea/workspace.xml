@@ -4,7 +4,6 @@
     <list default="true" id="ac65864c-0611-470c-8a06-c78d19df1daf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="89" column="95" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="96" />
+            <state relative-caret-position="586">
+              <caret line="81" column="7" lean-forward="true" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="38" column="103" selection-start-line="38" selection-start-column="103" selection-end-line="38" selection-end-column="103" />
+            <state relative-caret-position="183">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#295#296#0" expanded="true" />
@@ -148,8 +147,8 @@
         <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SavePackageFailException.java" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/Tasking.text" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/pickPackageFailException.java" />
-        <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java" />
+        <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" />
       </list>
     </option>
   </component>
@@ -267,7 +266,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592035685856" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592036341759" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -405,15 +404,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TaxiTest_shoule_be_0p8yuan_when_distance_is_1km - 2020.06.09 at 16h 22m 14s.xml">
-      <configuration name="TaxiTest.shoule_be_0p8yuan_when_distance_is_1km" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaxiTest_shoule_be_0p8yuan_when_distance_is_1km - 2020.06.09 at 16h 22m 58s.xml">
-      <configuration name="TaxiTest.shoule_be_0p8yuan_when_distance_is_1km" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaxiTest - 2020.06.09 at 16h 29m 39s.xml">
-      <configuration name="TaxiTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TaxiTest - 2020.06.09 at 16h 30m 10s.xml">
       <configuration name="TaxiTest" configurationId="JUnit" />
     </history-entry>
@@ -435,6 +425,15 @@
     <history-entry file="LockerTest_should_open_a_locker_fail_when_pick_a_package_given_a_repeat_ticket - 2020.06.13 at 16h 00m 07s.xml">
       <configuration name="LockerTest.should_open_a_locker_fail_when_pick_a_package_given_a_repeat_ticket" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LockerTest_should_open_a_locker_fail_when_pick_a_package_given_a_illegal_ticket - 2020.06.13 at 16h 08m 54s.xml">
+      <configuration name="LockerTest.should_open_a_locker_fail_when_pick_a_package_given_a_illegal_ticket" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LockerTest_should_open_a_locker_fail_when_pick_a_package_given_a_illegal_ticket - 2020.06.13 at 16h 13m 55s.xml">
+      <configuration name="LockerTest.should_open_a_locker_fail_when_pick_a_package_given_a_illegal_ticket" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LockerTest_should_open_a_locker_fail_when_pick_a_package_given_a_illegal_ticket - 2020.06.13 at 16h 15m 01s.xml">
+      <configuration name="LockerTest.should_open_a_locker_fail_when_pick_a_package_given_a_illegal_ticket" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -450,12 +449,12 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3124347" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3124347" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.36363637" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.36363637" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.31138977" />
@@ -581,8 +580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="38" column="103" selection-start-line="38" selection-start-column="103" selection-end-line="38" selection-end-column="103" />
+        <state relative-caret-position="183">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#295#296#0" expanded="true" />
@@ -593,8 +592,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/LockertTest/LockerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="89" column="95" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="96" />
+        <state relative-caret-position="586">
+          <caret line="81" column="7" lean-forward="true" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
