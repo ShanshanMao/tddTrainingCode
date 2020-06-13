@@ -5,6 +5,7 @@ package com.LockertTest;
 
 import com.tdd.Locker.Locker;
 import com.tdd.Locker.SavePackageFailException;
+import com.tdd.Locker.pickPackageFailException;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Before;

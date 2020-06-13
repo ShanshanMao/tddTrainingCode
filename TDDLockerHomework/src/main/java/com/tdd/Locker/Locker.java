@@ -7,6 +7,7 @@ import java.util.List;
  * created by ssmao on 20200613
  */
 public class Locker {
+    private List<String> repeatTickets;
     private int LockerUsedCount;
     private int LockerCount;
     private List<String> tickets;
@@ -14,6 +15,7 @@ public class Locker {
     public Locker(int LockerCount) {
         this.LockerCount = LockerCount;
         this.tickets = new ArrayList<String>();
+        this.repeatTickets = new ArrayList<String>();
     }
 
     public void setUsedCount(int LockerUsedCount) {
@@ -32,6 +34,11 @@ public class Locker {
         }
 
     public boolean get(String ticket){
+
+        if (repeatTickets.contains(ticket)) {
+            throw new pickPackageFailException("Failed to collect the parcel, the ticket is invalid！");
+        }
+        repeatTickets.add(ticket);
 
         return true;
 
