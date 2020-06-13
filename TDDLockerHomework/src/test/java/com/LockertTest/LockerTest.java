@@ -72,9 +72,22 @@ public class LockerTest {
             Assert.fail("Should throw an exception");
         }catch (pickPackageFailException e){
             assertThat(e,is(instanceOf(pickPackageFailException.class)));
-            assertThat(e.getMessage(),is("Failed to collect the parcel, the ticket is invalid！"));
+            assertThat(e.getMessage(),is("Failed to collect the package, the ticket have been used！"));
         }
+    }
 
+    @Test
+    public void should_open_a_locker_fail_when_pick_a_package_given_a_illegal_ticket(){
+        locker.setUsedCount(9);
+        String illegalTicket = locker.save();
+        locker.get(illegalTicket);
 
+        try{
+            locker.get(illegalTicket);
+            Assert.fail("Should throw an exception");
+        }catch (pickPackageFailException e){
+            assertThat(e,is(instanceOf(pickPackageFailException.class)));
+            assertThat(e.getMessage(),is("Failed to collect the package, the ticket is illegal! "));
+        }
     }
 }

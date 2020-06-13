@@ -36,7 +36,7 @@ public class Locker {
     public boolean get(String ticket){
 
         if (repeatTickets.contains(ticket)) {
-            throw new pickPackageFailException("Failed to collect the parcel, the ticket is invalid！");
+            throw new pickPackageFailException("Failed to collect the parcel, the ticket have been used！");
         }
         repeatTickets.add(ticket);
 
