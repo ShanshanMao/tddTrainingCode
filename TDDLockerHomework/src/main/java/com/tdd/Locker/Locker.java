@@ -1,50 +1,38 @@
 package com.tdd.Locker;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.tdd.Locker.exception.InvalidTicketException;
+import com.tdd.Locker.exception.NoRoomException;
+import lombok.var;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * created by ssmao on 20200613
  */
 public class Locker {
-    private List<String> repeatTickets;
-    private int LockerUsedCount;
-    private int LockerCount;
-    private List<String> illegalTicket;
+    private int size;
+    private Map<Ticket, Bag> bagMap = new HashMap<>();
 
-    public Locker(int LockerCount) {
-        this.LockerCount = LockerCount;
-        this.illegalTicket = new ArrayList<String>();
-        this.repeatTickets = new ArrayList<String>();
+    public Locker(int size) {
+        this.size = size;
     }
 
-    public void setUsedCount(int LockerUsedCount) {
-        this.LockerUsedCount = LockerUsedCount;
-    }
-
-    public String save()  {
-        if (LockerUsedCount >= LockerCount){
-            throw new SavePackageFailException("Lockers are fulled,save package failure!");
+    public Ticket store(Bag bag) {
+        if (bagMap.size() >= size) {
+            throw new NoRoomException("The locker is full");
         }
-
-        String ticket = "010";
-        repeatTickets.add(ticket);
-        LockerUsedCount++;
-
+        var ticket = new Ticket();
+        bagMap.put(ticket, bag);
         return ticket;
-        }
+    }
 
-    public boolean get(String ticket){
-
-        if (!repeatTickets.contains(ticket)) {
-            throw new pickPackageFailException("Failed to collect the parcel, the ticket have been used！");
+    public Bag pickUp(Ticket ticket) {
+        if (!bagMap.containsKey(ticket)) {
+            throw new InvalidTicketException("The ticket is invalid");
         }
-        if (illegalTicket.contains(ticket) ){
-            throw new pickPackageFailException("Failed to collect the package, the ticket is illegal! ");
-        }
-        illegalTicket.add(ticket);
-
-        return true;
+        var bag = bagMap.get(ticket);
+        bagMap.remove(ticket);
+        return bag;
     }
 
 }

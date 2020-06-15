@@ -1,0 +1,5 @@
+<root>
+    <item name='sun.security.krb5.internal.Ticket'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
