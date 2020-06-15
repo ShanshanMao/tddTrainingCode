@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
@@ -50,6 +49,19 @@ public class PrimaryLockerRobotTest {
         PrimaryLockerRobot robot = new PrimaryLockerRobot(Arrays.asList(firstlocker,secondlocker));
 
         assertThatThrownBy(() ->robot.store(myBag)).isInstanceOf(NoRoomException.class);
+    }
+
+    @Test
+    void should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot() throws Throwable {
+        Bag myBag = new Bag();
+        Locker firstlocker = new Locker(20);
+        Locker secondlocker = new Locker(20);
+        PrimaryLockerRobot robot = new PrimaryLockerRobot(Arrays.asList(firstlocker,secondlocker));
+
+        Ticket ticket = robot.store(myBag);
+
+        Bag returnedBag = firstlocker.pickUp(ticket);
+        assertSame(myBag,returnedBag);
     }
 
 }
