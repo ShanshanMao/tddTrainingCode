@@ -1,7 +1,10 @@
 package com.tdd.Locker;
 
 
+import com.tdd.Locker.exception.NoRoomException;
+
 import java.util.List;
+import java.util.function.Supplier;
 
 
 public class PrimaryLockerRobot {
@@ -11,11 +14,13 @@ public class PrimaryLockerRobot {
         this.lockers = lockers;
     }
 
-    public Ticket store(Bag myBag){
-        if (lockers.get(0).isFull()){
-            return lockers.get(1).store(myBag);
-        }
-        return null;
+    public Ticket store(Bag myBag) throws Throwable {
+        Locker hadSizeStoreLocker = lockers.stream()
+                .filter(lockers -> !lockers.isFull())
+                .findFirst()
+                .orElseThrow((Supplier<Throwable>) NoRoomException::new);
+
+        return hadSizeStoreLocker.store(myBag);
     }
 
 
