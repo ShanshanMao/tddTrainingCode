@@ -18,7 +18,7 @@ public class Locker {
     }
 
     public Ticket store(Bag bag) {
-        if (bagMap.size() >= size) {
+        if (isFull()){
             throw new NoRoomException("The locker is full");
         }
         var ticket = new Ticket();
@@ -35,5 +35,10 @@ public class Locker {
         return bag;
     }
 
+
+    public boolean isFull() {
+        return bagMap.size() == size;
+
+    }
 }
 
