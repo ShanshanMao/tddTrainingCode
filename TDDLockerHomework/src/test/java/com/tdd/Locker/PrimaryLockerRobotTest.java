@@ -1,8 +1,10 @@
 package com.tdd.Locker;
 
+import com.tdd.Locker.exception.InvalidTicketException;
 import com.tdd.Locker.exception.NoRoomException;
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
 import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -62,6 +64,17 @@ public class PrimaryLockerRobotTest {
 
         Bag returnedBag = firstlocker.pickUp(ticket);
         assertSame(myBag,returnedBag);
+    }
+
+    @Test
+    void should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot() {
+        Ticket ticket = new Ticket();
+        Locker firstlocker = new Locker(1);
+        Locker secondlocker = new Locker(1);
+        PrimaryLockerRobot robot = new PrimaryLockerRobot(Arrays.asList(firstlocker,secondlocker));
+
+        assertThatThrownBy(()->robot.pickUp(ticket))
+                .isInstanceOf(InvalidTicketException.class);
     }
 
 }

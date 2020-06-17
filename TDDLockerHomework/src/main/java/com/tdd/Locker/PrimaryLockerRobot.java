@@ -1,12 +1,11 @@
 package com.tdd.Locker;
 
 
+import com.tdd.Locker.exception.InvalidTicketException;
 import com.tdd.Locker.exception.NoRoomException;
 import lombok.var;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Supplier;
 
 
@@ -27,11 +26,12 @@ public class PrimaryLockerRobot {
         return hadSizeStoreLocker.store(myBag);
     }
 
-    public Bag pickUp(Ticket ticket){
+    public Bag pickUp(Ticket ticket) {
+        if (!bagMap.containsKey(ticket)) {
+            throw new InvalidTicketException("The ticket is invalid");
+        }
         var bag = bagMap.get(ticket);
         bagMap.remove(ticket);
         return bag;
     }
-
-
 }
