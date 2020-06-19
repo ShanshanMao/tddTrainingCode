@@ -18,17 +18,18 @@ public class Locker {
     }
 
     public Ticket store(Bag bag) {
-        if (isFull()){
-            throw new NoRoomException("The locker is full");
+        if (size<=0){
+            throw new NoRoomException();
         }
         var ticket = new Ticket();
         bagMap.put(ticket, bag);
+        size--;
         return ticket;
     }
 
     public Bag pickUp(Ticket ticket) {
         if (!bagMap.containsKey(ticket)) {
-            throw new InvalidTicketException("The ticket is invalid");
+            throw new InvalidTicketException();
         }
         var bag = bagMap.get(ticket);
         bagMap.remove(ticket);
@@ -37,8 +38,11 @@ public class Locker {
 
 
     public boolean isFull() {
-        return bagMap.size() == size;
+        return size ==0;
+    }
 
+    public boolean contains(Ticket ticket){
+        return bagMap.containsKey(ticket);
     }
 }
 
