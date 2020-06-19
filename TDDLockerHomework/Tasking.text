@@ -1,10 +1,5 @@
 
 TDD 课1题目：实现储物柜（Locker）可以存包，取包
-作业要求
-todo - 产出Tasking列表
-todo - 按照TDD的方式实现需求
-todo - 小步提交，commit信息表意
-todo - 最后只需要提交Github地址
 
 Tasking:
 Given: 储物柜（locker）未满 When: 存一个包 Then: 存包成功，返回小票
@@ -15,11 +10,6 @@ Given：拿着伪造小票到储物柜（locker） When：取一个包 Then：�
 ------
 
 TDD 课2题目：PrimaryLockerRobot实现储物柜（Locker）可以存包，取包
-作业要求
-todo - 产出Tasking列表
-todo - 按照TDD的方式实现需求
-todo - 小步提交，commit信息表意
-todo - 最后只需要提交Github地址
 
 Tasking：
 Given 机器人(robot)管理两个柜子（locker），且两个locker均有可用容量
@@ -37,4 +27,40 @@ Then 取包成功
 Given 机器人(robot)管理两个柜子（locker），拿到一张非法的票据
 When robot取包
 Then 取包失败，提示票据非法
+--------
+
+TDD 课3题目：实现SmartLockerRobot可以存包，取包
+
+Tasking:
+Given：SmartLockerRobot管理Locker1，Locker2，Locker1和Locker2的剩余容量相同
+When：SmartLockerRobot存包
+Then： 返回ticket，成功存入Locker1
+
+Given：SmartLockerRobot管理Locker1，Locker2，Locker1的剩余容量比Locker2的剩余容量多
+When：SmartLockerRobot存包
+Then： 返回ticket，成功存入Locker1
+
+Given：SmartLockerRobot管理Locker1，Locker2，Locker1的剩余容量比Locker2的剩余容量少
+When：SmartLockerRobot存包
+Then： 返回ticket，成功存入Locker2
+
+Given：SmartLockerRobot管理Locker1，Locker2，Locker1和Locker2的剩余容量均为0
+When：SmartLockerRobot存包
+Then： 存包失败，提示：locker均已满
+
+Given：SmartLockerRobot管理Locker1，Locker2，通过SmartLockerRobot存包得到一得到一张有效的ticket
+When：SmartLockerRobot取包
+Then： 取包成功
+
+Given：SmartLockerRobot和PrimaryLockerRobot管理Locker1，Locker2，通过PrimaryLockerRobot存包得到一得到一张有效的ticket
+When：SmartLockerRobot取包
+Then： 取包成功
+
+Given：SmartLockerRobot和PrimaryLockerRobot管理Locker1，Locker2，通过SmartLockerRobot存包得到一得到一张有效的ticket
+When：PrimaryLockerRobot取包
+Then： 取包成功
+
+Given：SmartLockerRobot管理Locker1，Locker2，拿一张非法票去取包
+When：SmartLockerRobot取包
+Then： 取包失败，提示：ticket非法
 
