@@ -1,5 +1,7 @@
 package com.tdd.Locker;
 
+import com.tdd.Locker.exception.NoRoomException;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -16,6 +18,10 @@ public class SmartLockerRobot {
     public Ticket store(Bag bag) {
 
         Optional<Locker> maxCapacity = lockers.stream().max(Comparator.comparing(Locker::getCapacity));
-        return maxCapacity.map(locker -> locker.store(bag)).orElse(null);
+        if ((maxCapacity.isPresent())){
+            return maxCapacity.get().store(bag);
+        }
+        throw new NoRoomException();
     }
+
 }

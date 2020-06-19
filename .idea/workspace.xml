@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac65864c-0611-470c-8a06-c78d19df1daf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SmartLockerRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SmartLockerRobot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/SmartLockerRobotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/SmartLockerRobotTest.java" afterDir="false" />
     </list>
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SmartLockerRobot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="315">
+              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#172#173#0" expanded="true" />
@@ -32,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/SmartLockerRobotTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="37" column="61" lean-forward="true" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
+            <state relative-caret-position="242">
+              <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/PrimaryLockerRobotTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-230">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="371">
+              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/PrimaryLockerRobot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            <state relative-caret-position="67">
+              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#175#176#0" expanded="true" />
@@ -129,9 +128,9 @@
         <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/exception/InvalidTicketException.java" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/exception/NoRoomException.java" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/Tasking.text" />
+        <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/SmartLockerRobotTest.java" />
         <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SmartLockerRobot.java" />
-        <option value="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" />
       </list>
     </option>
   </component>
@@ -143,7 +142,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="476" />
+    <option name="x" value="548" />
     <option name="y" value="46" />
     <option name="width" value="1554" />
     <option name="height" value="866" />
@@ -154,6 +153,9 @@
         <expanded-state>
           <State />
           <State>
+            <id>Code maturityJava</id>
+          </State>
+          <State>
             <id>Java</id>
           </State>
           <State>
@@ -162,7 +164,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>Java</id>
+            <id>Deprecation</id>
           </State>
         </selected-state>
       </profile-state>
@@ -250,7 +252,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592543900122" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592544759931" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -279,7 +281,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SmartLockerRobotTest.should_store_in_2nd_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_2nd_locker_capacity_more">
+  <component name="RunManager" selected="JUnit.SmartLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full">
     <configuration name="PrimaryLockerRobotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TDDLockerHomework" />
       <extension name="coverage">
@@ -290,22 +292,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.tdd.Locker" />
       <option name="MAIN_CLASS_NAME" value="com.tdd.Locker.PrimaryLockerRobotTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PrimaryLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_robot_manage_two_lockers_and_both_full" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TDDLockerHomework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tdd.Locker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tdd.Locker" />
-      <option name="MAIN_CLASS_NAME" value="com.tdd.Locker.PrimaryLockerRobotTest" />
-      <option name="METHOD_NAME" value="should_store_in_locker_is_fail_when_store_bag_given_robot_manage_two_lockers_and_both_full" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -358,20 +344,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SmartLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TDDLockerHomework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tdd.Locker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tdd.Locker" />
+      <option name="MAIN_CLASS_NAME" value="com.tdd.Locker.SmartLockerRobotTest" />
+      <option name="METHOD_NAME" value="should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.PrimaryLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_robot_manage_two_lockers_and_both_full" />
       <item itemvalue="JUnit.PrimaryLockerRobotTest" />
       <item itemvalue="JUnit.SmartLockerRobotTest.should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_capacity_is_the_same" />
       <item itemvalue="JUnit.SmartLockerRobotTest.should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_first_locker_capacity_more" />
       <item itemvalue="JUnit.SmartLockerRobotTest.should_store_in_2nd_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_2nd_locker_capacity_more" />
+      <item itemvalue="JUnit.SmartLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SmartLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full" />
         <item itemvalue="JUnit.SmartLockerRobotTest.should_store_in_2nd_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_2nd_locker_capacity_more" />
         <item itemvalue="JUnit.SmartLockerRobotTest.should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_first_locker_capacity_more" />
         <item itemvalue="JUnit.SmartLockerRobotTest.should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_capacity_is_the_same" />
         <item itemvalue="JUnit.PrimaryLockerRobotTest" />
-        <item itemvalue="JUnit.PrimaryLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_robot_manage_two_lockers_and_both_full" />
       </list>
     </recent_temporary>
   </component>
@@ -389,18 +391,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PrimaryLockerRobotTest_should_store_in_locker_is_fail_when_store_bag_given_robot_manage_two_lockers_and_both_full - 2020.06.19 at 09h 37m 55s.xml">
-      <configuration name="PrimaryLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_robot_manage_two_lockers_and_both_full" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimaryLockerRobotTest - 2020.06.19 at 09h 38m 02s.xml">
-      <configuration name="PrimaryLockerRobotTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SmartLockerRobotTest_should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_capacity_is_the_same - 2020.06.19 at 10h 13m 15s.xml">
-      <configuration name="SmartLockerRobotTest.should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_capacity_is_the_same" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SmartLockerRobotTest_should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_capacity_is_the_same - 2020.06.19 at 10h 16m 43s.xml">
-      <configuration name="SmartLockerRobotTest.should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_capacity_is_the_same" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SmartLockerRobotTest_should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_capacity_is_the_same - 2020.06.19 at 10h 17m 47s.xml">
       <configuration name="SmartLockerRobotTest.should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_capacity_is_the_same" configurationId="JUnit" />
     </history-entry>
@@ -419,10 +409,21 @@
     <history-entry file="SmartLockerRobotTest_should_store_in_2nd_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_2nd_locker_capacity_more - 2020.06.19 at 13h 14m 40s.xml">
       <configuration name="SmartLockerRobotTest.should_store_in_2nd_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_2nd_locker_capacity_more" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SmartLockerRobotTest_should_store_in_2nd_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_2nd_locker_capacity_more - 2020.06.19 at 13h 19m 43s.xml">
+      <configuration name="SmartLockerRobotTest.should_store_in_2nd_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_2nd_locker_capacity_more" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmartLockerRobotTest_should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full - 2020.06.19 at 13h 22m 19s.xml">
+      <configuration name="SmartLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmartLockerRobotTest_should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full - 2020.06.19 at 13h 28m 10s.xml">
+      <configuration name="SmartLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmartLockerRobotTest_should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full - 2020.06.19 at 13h 30m 46s.xml">
+      <configuration name="SmartLockerRobotTest.should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="476" y="46" width="1554" height="866" extended-state="0" />
-    <editor active="true" />
+    <frame x="548" y="46" width="1554" height="866" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.16005291" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -657,32 +658,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/PrimaryLockerRobotTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/function/Function.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/PrimaryLockerRobot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#175#176#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -698,24 +677,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SmartLockerRobot.java">
+    <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/PrimaryLockerRobotTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="371">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/PrimaryLockerRobot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/SmartLockerRobotTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="37" column="61" lean-forward="true" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
+        <state relative-caret-position="242">
+          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SmartLockerRobot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
           </folding>
         </state>
       </provider>

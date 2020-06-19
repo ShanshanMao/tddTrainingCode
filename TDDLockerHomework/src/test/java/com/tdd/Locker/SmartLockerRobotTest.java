@@ -1,5 +1,6 @@
 package com.tdd.Locker;
 
+import com.tdd.Locker.exception.NoRoomException;
 import org.junit.Test;
 import static java.util.Arrays.asList;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -43,4 +44,14 @@ public class SmartLockerRobotTest {
         assertNotNull(ticket);
         assertSame(myBag,secondlocker.pickUp(ticket));
     }
+
+    @Test(expected = NoRoomException.class)
+    public void should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full() {
+        PrimaryLockerRobot robot = new PrimaryLockerRobot(asList(new Locker(1), new Locker(1)));
+        robot.store(new Bag());
+        robot.store(new Bag());
+
+        robot.store(new Bag());
+    }
+
 }
