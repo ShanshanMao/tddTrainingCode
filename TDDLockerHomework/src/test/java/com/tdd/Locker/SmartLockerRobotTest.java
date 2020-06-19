@@ -10,10 +10,10 @@ public class SmartLockerRobotTest {
     @Test
     public void should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_capacity_is_the_same() {
         Locker firstlocker = new Locker(2);
-        SmartLockerRobot robot = new SmartLockerRobot(asList(firstlocker,new Locker(2)));
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(asList(firstlocker,new Locker(2)));
         Bag myBag = new Bag();
 
-        Ticket ticket = robot.store(myBag);
+        Ticket ticket = smartLockerRobot.store(myBag);
 
         assertNotNull(ticket);
         assertSame(myBag,firstlocker.pickUp(ticket));
@@ -23,10 +23,10 @@ public class SmartLockerRobotTest {
     public void should_store_in_1st_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_first_locker_capacity_more() {
         Locker firstlocker = new Locker(5);
         Locker secondlocker = new Locker(2);
-        SmartLockerRobot robot = new SmartLockerRobot(asList(firstlocker,secondlocker));
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(asList(firstlocker,secondlocker));
         Bag myBag = new Bag();
 
-        Ticket ticket = robot.store(myBag);
+        Ticket ticket = smartLockerRobot.store(myBag);
 
         assertNotNull(ticket);
         assertSame(myBag,firstlocker.pickUp(ticket));
@@ -36,10 +36,10 @@ public class SmartLockerRobotTest {
     public void should_store_in_2nd_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_2nd_locker_capacity_more() {
         Locker firstlocker = new Locker(2);
         Locker secondlocker = new Locker(5);
-        SmartLockerRobot robot = new SmartLockerRobot(asList(firstlocker,secondlocker));
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(asList(firstlocker,secondlocker));
         Bag myBag = new Bag();
 
-        Ticket ticket = robot.store(myBag);
+        Ticket ticket = smartLockerRobot.store(myBag);
 
         assertNotNull(ticket);
         assertSame(myBag,secondlocker.pickUp(ticket));
@@ -47,21 +47,35 @@ public class SmartLockerRobotTest {
 
     @Test(expected = NoRoomException.class)
     public void should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full() {
-        SmartLockerRobot robot = new SmartLockerRobot(asList(new Locker(1), new Locker(1)));
-        robot.store(new Bag());
-        robot.store(new Bag());
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(asList(new Locker(1), new Locker(1)));
+        smartLockerRobot.store(new Bag());
+        smartLockerRobot.store(new Bag());
 
-        robot.store(new Bag());
+        smartLockerRobot.store(new Bag());
     }
 
     @Test
     public void should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_smart_robot() {
         Bag myBag = new Bag();
-        SmartLockerRobot robot = new SmartLockerRobot(asList(new Locker(1),new Locker(1)));
-        Ticket ticket = robot.store(myBag);
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(asList(new Locker(1),new Locker(1)));
+        Ticket ticket = smartLockerRobot.store(myBag);
 
-        Bag bag = robot.pickUp(ticket);
+        Bag bag = smartLockerRobot.pickUp(ticket);
         assertSame(myBag,bag);
     }
+
+    @Test
+    public void should_return_a_bag_store_in_primary_robot1_success_when_pick_up_bag_a_given_a_valid_ticket_to_smart_robot() {
+        Bag myBag = new Bag();
+        Locker firstlocker = new Locker(1);
+        Locker secondlocker = new Locker(1);
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(asList(firstlocker,secondlocker));
+        PrimaryLockerRobot primaryLockerRobot = new PrimaryLockerRobot(asList(firstlocker,secondlocker));
+        Ticket ticket = primaryLockerRobot.store(myBag);
+
+        Bag bag = smartLockerRobot.pickUp(ticket);
+        assertSame(myBag,bag);
+    }
+
 
 }
