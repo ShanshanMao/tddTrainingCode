@@ -65,7 +65,7 @@ public class SmartLockerRobotTest {
     }
 
     @Test
-    public void should_return_a_bag_store_in_primary_robot1_success_when_pick_up_bag_a_given_a_valid_ticket_to_smart_robot() {
+    public void should_return_a_bag_store_in_primary_robot_success_when_pick_up_bag_a_given_a_valid_ticket_to_smart_robot() {
         Bag myBag = new Bag();
         Locker firstlocker = new Locker(1);
         Locker secondlocker = new Locker(1);
@@ -76,6 +76,22 @@ public class SmartLockerRobotTest {
         Bag bag = smartLockerRobot.pickUp(ticket);
         assertSame(myBag,bag);
     }
+
+    @Test
+    public void should_return_a_bag_store_in_smart_robot_success_when_pick_up_bag_a_given_a_valid_ticket_to_primary_robot() {
+        Bag myBag = new Bag();
+        Locker firstlocker = new Locker(1);
+        Locker secondlocker = new Locker(1);
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(asList(firstlocker,secondlocker));
+        PrimaryLockerRobot primaryLockerRobot = new PrimaryLockerRobot(asList(firstlocker,secondlocker));
+        Ticket ticket = smartLockerRobot.store(myBag);
+
+        Bag bag = primaryLockerRobot.pickUp(ticket);
+        assertSame(myBag,bag);
+    }
+
+
+
 
 
 }
