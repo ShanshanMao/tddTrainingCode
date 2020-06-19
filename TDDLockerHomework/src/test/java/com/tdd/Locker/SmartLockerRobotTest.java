@@ -1,5 +1,6 @@
 package com.tdd.Locker;
 
+import com.tdd.Locker.exception.InvalidTicketException;
 import com.tdd.Locker.exception.NoRoomException;
 import org.junit.Test;
 import static java.util.Arrays.asList;
@@ -90,8 +91,11 @@ public class SmartLockerRobotTest {
         assertSame(myBag,bag);
     }
 
+    @Test(expected = InvalidTicketException.class)
+    public void should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_smart_robot() {
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(asList(new Locker(1),new Locker(1)));
 
-
-
+        smartLockerRobot.pickUp(new Ticket());
+    }
 
 }

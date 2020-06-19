@@ -1,5 +1,6 @@
 package com.tdd.Locker;
 
+import com.tdd.Locker.exception.InvalidTicketException;
 import com.tdd.Locker.exception.NoRoomException;
 
 import java.util.Collections;
@@ -30,7 +31,6 @@ public class SmartLockerRobot {
                 return locker.pickUp(ticket);
             }
         }
-
-        return null;
+        throw new InvalidTicketException();
     }
 }
