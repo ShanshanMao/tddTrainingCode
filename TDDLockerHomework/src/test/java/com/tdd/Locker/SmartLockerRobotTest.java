@@ -30,4 +30,17 @@ public class SmartLockerRobotTest {
         assertNotNull(ticket);
         assertSame(myBag,firstlocker.pickUp(ticket));
     }
+
+    @Test
+    public void should_store_in_2nd_locker_and_return_ticket_when_store_bag_given_smart_robot_manage_two_lockers_and_2nd_locker_capacity_more() {
+        Locker firstlocker = new Locker(2);
+        Locker secondlocker = new Locker(5);
+        SmartLockerRobot robot = new SmartLockerRobot(asList(firstlocker,secondlocker));
+        Bag myBag = new Bag();
+
+        Ticket ticket = robot.store(myBag);
+
+        assertNotNull(ticket);
+        assertSame(myBag,secondlocker.pickUp(ticket));
+    }
 }

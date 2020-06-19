@@ -45,5 +45,8 @@ public class Locker {
         return bagMap.containsKey(ticket);
     }
 
+    public  int getCapacity() {
+        return size - bagMap.size();
+    }
 }
 
