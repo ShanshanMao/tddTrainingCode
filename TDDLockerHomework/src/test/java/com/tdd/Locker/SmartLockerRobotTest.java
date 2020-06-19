@@ -47,11 +47,21 @@ public class SmartLockerRobotTest {
 
     @Test(expected = NoRoomException.class)
     public void should_store_in_locker_is_fail_when_store_bag_given_smart_robot_manage_two_lockers_and_both_full() {
-        PrimaryLockerRobot robot = new PrimaryLockerRobot(asList(new Locker(1), new Locker(1)));
+        SmartLockerRobot robot = new SmartLockerRobot(asList(new Locker(1), new Locker(1)));
         robot.store(new Bag());
         robot.store(new Bag());
 
         robot.store(new Bag());
+    }
+
+    @Test
+    public void should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_smart_robot() {
+        Bag myBag = new Bag();
+        SmartLockerRobot robot = new SmartLockerRobot(asList(new Locker(1),new Locker(1)));
+        Ticket ticket = robot.store(myBag);
+
+        Bag bag = robot.pickUp(ticket);
+        assertSame(myBag,bag);
     }
 
 }

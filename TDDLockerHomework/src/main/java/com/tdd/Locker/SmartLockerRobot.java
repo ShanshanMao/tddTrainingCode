@@ -24,4 +24,13 @@ public class SmartLockerRobot {
         throw new NoRoomException();
     }
 
+    public Bag pickUp(Ticket ticket) {
+        for (Locker locker:lockers){
+            if (locker.contains(ticket)){
+                return locker.pickUp(ticket);
+            }
+        }
+
+        return null;
+    }
 }
