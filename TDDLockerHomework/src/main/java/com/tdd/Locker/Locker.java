@@ -44,5 +44,6 @@ public class Locker {
     public boolean contains(Ticket ticket){
         return bagMap.containsKey(ticket);
     }
+
 }
 
