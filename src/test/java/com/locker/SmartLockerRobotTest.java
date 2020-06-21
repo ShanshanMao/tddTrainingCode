@@ -98,4 +98,14 @@ public class SmartLockerRobotTest {
         smartLockerRobot.pickUp(new Ticket());
     }
 
+    @Test
+    public void should_return_a_ticket_when_store_3_bags_with_two_locker_with_2_capacity_in_smartLockerRobot(){
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(asList(new Locker(2), new Locker(2)));
+        smartLockerRobot.store(new Bag());
+        smartLockerRobot.store(new Bag());
+        Ticket ticket = smartLockerRobot.store(new Bag());
+
+        Assert.assertSame(Ticket.class,ticket.getClass());
+    }
+
 }
