@@ -1,36 +1,40 @@
-普通商品业务task:
-task1:
-Given 普通商品，未过保质期，价值在0 ~ 50之间
-When 按天更新
-Then 保质期和价值均减少1
-
-Task2:
-Given 普通商品，过了保质期，价值在0 ~ 50之间
-When 按天更新
-Then  保质期减少1，价值减少2
-
-后台门票BackStagePass保质期是10，5，0，另外价值0，50，边界场景如下：
-1. 保质期是10以上，价值0< quality <50以内
-2. 保质期是5 ~ 10，价值0 < quality < 49，增加2
-3. 保质期是1 ~ 5，价值0 < quality < 48，增加3
-4. 保质期是0，价值0< quality <50
-后台门票业务task:
-task1:
-Given 后台门票，未过保质期，价值在0 ~ 50之间
-When 保质期>10,按天更新
-Then 保质期减少1，价值增加1
-
-task2:
-Given 后台门票，未过保质期，价值在0 ~ 50之间
-When 保质期在5～10，按天更新
-Then 保质期每减少1，价值增加2
-
-task3:
-Given 后台门票，未过保质期，价值在0 ~ 50之间
-When 保质期在1～5，按天更新
-Then 保质期每减少1，价值增加3
-
-task4:
-Given 后台门票，过了保质期，价值在0 ~ 50之间
-When 保质期为0
-Then 价值为0
+ # tddTraining
+ 
+ ## SmartLockerRobotTest
+ 
+ 1. task: 
+     - Given: SmartLockerRobot有2个容量为2的Locker
+     - When: 存包
+     - Then: 存进第一个Locker，并返回ticket
+ 1. task: 
+     - Given: SmartLockerRobot有两个Locker，第一个Locker容量为5，第二个Locker容量2
+     - When: 存包
+     - Then: 存进第一个Locker，并返回ticket
+ 1. task: 
+     - Given: SmartLockerRobot有两个Locker，第一个Locker容量为2，第二个Locker容量5
+     - When: 存包
+     - Then: 存进第二个Locker，并返回ticket
+ 1. task: 
+     - Given: SmartLockerRobot有两个Locker，2个容量为1的Locker，已经存了两次包
+     - When: 存包
+     - Then: 存包失败，返回NoRoomException异常
+ 1. task: 
+     - Given: SmartLockerRobot有两个Locker，已经成功存包一次，并且有一张有效Ticket
+     - When: 取包
+     - Then: 成功取回对应包
+ 1. task: 
+     - Given: SmartLockerRobot有两个Locker，使用PrimaryLockerRobot成功存包获得ticket
+     - When: 使用ticket在SmartLockerRobot取包
+     - Then: 成功取得对应包
+ 1. task: 
+     - Given: SmartLockerRobot有两个Locker，使用SmartLockerRobot成功存包获得ticket
+     - When: 使用ticket在PrimaryLockerRobot取包
+     - Then: 成功取得对应包
+ 1. task: 
+     - Given: SmartLockerRobot有两个Locker
+     - When: 使用无效ticket取包
+     - Then: 取包失败，抛出InvalidTicketException异常
+ 1. task: 
+     - Given: SmartLockerRobot有两个容量为2的Locker，已经存包3次
+     - When: 存包
+     - Then: 存包成功，并返回ticket

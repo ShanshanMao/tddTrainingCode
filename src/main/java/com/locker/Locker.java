@@ -18,12 +18,11 @@ public class Locker {
     }
 
     public Ticket store(Bag bag) {
-        if (size <= 0) {
+        if (getCapacity()<= 0) {
             throw new NoRoomException();
         }
         Ticket ticket = new Ticket();
         bagMap.put(ticket, bag);
-        size--;
         return ticket;
     }
 

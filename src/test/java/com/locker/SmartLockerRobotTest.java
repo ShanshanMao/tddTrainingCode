@@ -103,6 +103,7 @@ public class SmartLockerRobotTest {
         SmartLockerRobot smartLockerRobot = new SmartLockerRobot(asList(new Locker(2), new Locker(2)));
         smartLockerRobot.store(new Bag());
         smartLockerRobot.store(new Bag());
+        smartLockerRobot.store(new Bag());
         Ticket ticket = smartLockerRobot.store(new Bag());
 
         Assert.assertSame(Ticket.class,ticket.getClass());
