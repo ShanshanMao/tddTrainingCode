@@ -64,3 +64,24 @@ Given：SmartLockerRobot管理Locker1，Locker2，拿一张非法票去取包
 When：SmartLockerRobot取包
 Then： 取包失败，提示：ticket非法
 
+----------------------------------
+TDD 课4题目：实现LockerRobotManager可以存包，取包
+
+Tasking
+
+1、Given locker robot manager管理两个locker，且两个locker均有空间，locker robot manager未管理robot	When: locker robot manager存包	Then：成功存入第一个locker，返回ticket
+2、Given locker robot manager管理两个locker，第一个locker已满，第二个locker有可用空间，locker robot manager未管理robot	When: locker robot manager存包	Then：成功存入第二个locker，返回ticket
+3、Given locker robot manager管理两个locker，两个locker均已满，locker robot manager未管理robot	When: locker robot manager存包	Then：存包失败，提示：locker均已满
+4、Given locker robot manager未管理两个locker，locker robot manager管理两个robot，且robot管理的locker均有空位	When: locker robot manager存包	Then：由robot1存包成功，返回ticket
+5、Given locker robot manager未管理两个locker，locker robot manager管理两个robot，robot1的locker没有空位，robot2的locker有空位	When: locker robot manager存包	Then：由robot2存包成功，返回ticket
+6、Given locker robot manager未管理两个locker，locker robot manager管理两个robot，robot1和2均没有空位	When：locker robot manager存包	Then：存包失败，提示：locker均已满
+7、Given locker robot manager管理1个locker和1个robot，且均有空位	When：locker robot manager存包成功	Then：robot存包成功，返回ticket
+8、Given locker robot manager管理1个locker和1个robot，locker有空位，但robot管理的locker没有空位	When：locker robot manager存包	Then：locker robot manager存包成功，返回ticket
+9、Given locker robot manager管理1个locker和1个robot，locker和robot管理的locker均已满	When：locker robot manager存包	Then：存包失败，提示：locker均已满
+10、Given locker robot manager管理两个locker，没有管理robot，且ticket有效	When：locker robot manager取包  Then：	取包成功
+11、Given locker robot manager管理两个locker没有管理robot，且ticket无效	When：locker robot manager取包	Then：取包失败，提示：ticket无效
+12、Given locker robot manager没有管理locker，管理两个robot，且ticket有效	When：locker robot manager取包	Then：取包成功
+13、Given locker robot manager没有管理locker，管理两个robot，且ticket无效	When：locker robot manager取包	Then：取包失败，提示：ticket无效
+14、Given locker robot manager管理一个locker和一个robot，且ticket有效	When：locker robot manager取包	Then：取包成功
+15、Given locker robot manager管理一个locker和一个robot，且ticket无效	When：locker robot manager取包	Then：取包失败，提示：ticket无效
+
