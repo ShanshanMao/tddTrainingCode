@@ -4,18 +4,19 @@ import com.tdd.Locker.exception.NoRoomException;
 
 import java.util.List;
 
-public class LockerRobotManager {
-    private final List<Locker> lockers;
+public class LockerRobotManager extends LockerRobot {
 
-    public LockerRobotManager(List<Locker> lockers) {
-        this.lockers = lockers;
+    private List<LockerRobot> lockerRobots;
 
+    public LockerRobotManager(List<Locker> lockers, List<LockerRobot> lockerRobots) {
+        super(lockers);
+        this.lockerRobots = lockerRobots;
     }
 
     public Ticket store(Bag myBag) {
-        for (Locker locker : lockers) {
-            if (!locker.isFull()) {
-                return locker.store(myBag);
+        for (LockerRobot lockerRobot : lockerRobots) {
+            if (lockerRobot.isAvailable()) {
+                return lockerRobot.store(myBag);
             }
         }
         throw new NoRoomException();

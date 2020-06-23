@@ -1,32 +1,20 @@
 package com.tdd.Locker;
 
-import com.tdd.Locker.exception.InvalidTicketException;
 import com.tdd.Locker.exception.NoRoomException;
 
 import java.util.*;
 
-public class PrimaryLockerRobot {
-    private final List<Locker> lockers;
-
+public class PrimaryLockerRobot extends LockerRobot{
     public PrimaryLockerRobot(List<Locker> lockers){
-        this.lockers = lockers;
+        super(lockers);
     }
 
-    public Ticket store(Bag bag){
+    public Ticket store(Bag myBag){
         for (Locker locker : lockers){
             if (!locker.isFull()){
-                return locker.store(bag);
+                return locker.store(myBag);
             }
         }
         throw new NoRoomException();
-    }
-
-    public Bag pickUp(Ticket ticket) {
-       for (Locker locker : lockers){
-           if(locker.contains(ticket)){
-               return locker.pickUp(ticket);
-           }
-       }
-       throw new InvalidTicketException();
     }
 }
