@@ -1,5 +1,7 @@
 package com.tdd.Locker;
 
+import com.tdd.Locker.exception.NoRoomException;
+
 import java.util.List;
 
 public class LockerRobotManager {
@@ -12,11 +14,11 @@ public class LockerRobotManager {
 
     public Ticket store(Bag myBag) {
         for (Locker locker : lockers) {
-            if (locker.isAvailable()) {
+            if (!locker.isFull()) {
                 return locker.store(myBag);
             }
         }
-        return null;
+        throw new NoRoomException();
     }
 
 }

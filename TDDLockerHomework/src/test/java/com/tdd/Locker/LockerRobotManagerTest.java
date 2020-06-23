@@ -1,5 +1,6 @@
 package com.tdd.Locker;
 
+import com.tdd.Locker.exception.NoRoomException;
 import org.junit.Test;
 
 import static java.util.Arrays.asList;
@@ -31,5 +32,14 @@ public class LockerRobotManagerTest {
 
         assertNotNull(ticket);
         assertSame(myBag,secondlocker.pickUp(ticket));
+    }
+
+    @Test(expected = NoRoomException.class)
+    public void should_store_in_locker_is_fail_when_store_bag_given_manager_robot_manage_two_lockers_and_both_full(){
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(new Locker(1),new Locker(1)));
+        lockerRobotManager.store(new Bag());
+        lockerRobotManager.store(new Bag());
+
+        lockerRobotManager.store(new Bag());
     }
 }
