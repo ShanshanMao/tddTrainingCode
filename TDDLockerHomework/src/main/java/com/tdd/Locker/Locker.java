@@ -48,5 +48,9 @@ public class Locker {
     public  int getCapacity() {
         return size - bagMap.size();
     }
+
+    public boolean isAvailable() {
+        return getCapacity()>0;
+    }
 }
 

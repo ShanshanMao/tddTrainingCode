@@ -11,7 +11,12 @@ public class LockerRobotManager {
     }
 
     public Ticket store(Bag myBag) {
-        return lockers.get(0).store(myBag);
+        for (Locker locker : lockers) {
+            if (locker.isAvailable()) {
+                return locker.store(myBag);
+            }
+        }
+        return null;
     }
 
 }
