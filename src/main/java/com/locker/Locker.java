@@ -9,16 +9,16 @@ import java.util.Map;
 /**
  * created by ssmao on 20200613
  */
-public class Locker {
-    private int size;
+class Locker {
+    private int initCapacity;
     private Map<Ticket, Bag> bagMap = new HashMap<>();
 
-    public Locker(int size) {
-        this.size = size;
+    Locker(int initCapacity) {
+        this.initCapacity = initCapacity;
     }
 
-    public Ticket store(Bag bag) {
-        if (getCapacity()<= 0) {
+    Ticket store(Bag bag) {
+        if (getAvailableCapacity() <= 0) {
             throw new NoRoomException();
         }
         Ticket ticket = new Ticket();
@@ -26,7 +26,7 @@ public class Locker {
         return ticket;
     }
 
-    public Bag pickUp(Ticket ticket) {
+    Bag pickUp(Ticket ticket) {
         if (!bagMap.containsKey(ticket)) {
             throw new InvalidTicketException();
         }
@@ -36,16 +36,16 @@ public class Locker {
     }
 
 
-    public boolean isFull() {
-        return size == 0;
+    boolean isFull() {
+        return initCapacity - bagMap.size() <= 0;
     }
 
-    public boolean contains(Ticket ticket) {
+    boolean contains(Ticket ticket) {
         return bagMap.containsKey(ticket);
     }
 
-    public int getCapacity() {
-        return size - bagMap.size();
+    int getAvailableCapacity() {
+        return initCapacity - bagMap.size();
     }
 }
 

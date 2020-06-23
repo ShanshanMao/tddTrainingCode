@@ -1,4 +1,4 @@
 package com.locker;
 
-public class Ticket {
+class Ticket {
 }

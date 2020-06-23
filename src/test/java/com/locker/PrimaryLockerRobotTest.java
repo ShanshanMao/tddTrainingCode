@@ -5,6 +5,8 @@ import com.locker.exception.NoRoomException;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.concurrent.locks.Lock;
+
 import static java.util.Arrays.asList;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
@@ -13,28 +15,31 @@ import static org.junit.Assert.assertSame;
 public class PrimaryLockerRobotTest {
     @Test
     public void should_store_in_1st_locker_and_return_ticket_when_store_bag_given_robot_manage_two_lockers_and_both_not_full() {
-        Locker firstlocker = new Locker(20);
-        Locker secondlocker = new Locker(20);
-        PrimaryLockerRobot robot = new PrimaryLockerRobot(asList(firstlocker,secondlocker));
+        Locker firstLocker = new Locker(20);
+        Locker secondLocker = new Locker(20);
+        PrimaryLockerRobot robot = new PrimaryLockerRobot(asList(firstLocker,secondLocker));
         Bag myBag = new Bag();
 
         Ticket ticket = robot.store(myBag);
 
         Assert.assertNotNull(ticket);
-        assertSame(myBag,firstlocker.pickUp(ticket));
+        assertSame(myBag,firstLocker.pickUp(ticket));
     }
 
     @Test
     public void should_store_in_2nd_locker_and_return_ticket_when_store_bag_given_robot_manage_1st_is_full_and_2nd_locker_is_not_full() {
-        Locker secondlocker = new Locker(10);
-        PrimaryLockerRobot robot = new PrimaryLockerRobot(asList(new Locker(1),secondlocker));
+        Locker firstLocker = new Locker(1);
+        Locker secondLocker = new Locker(10);
+        firstLocker.store(new Bag());
+        PrimaryLockerRobot robot = new PrimaryLockerRobot(asList(firstLocker,secondLocker));
+
         robot.store(new Bag());
 
         Bag myBag = new Bag();
         Ticket ticket =robot.store(myBag);
 
         assertNotNull(ticket);
-        assertSame(myBag,secondlocker.pickUp(ticket));
+        assertSame(myBag,secondLocker.pickUp(ticket));
     }
 
     @Test(expected = NoRoomException.class)

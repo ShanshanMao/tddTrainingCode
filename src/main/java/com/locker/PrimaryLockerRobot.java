@@ -5,14 +5,14 @@ import com.locker.exception.NoRoomException;
 
 import java.util.*;
 
-public class PrimaryLockerRobot {
+class PrimaryLockerRobot {
     private final List<Locker> lockers;
 
-    public PrimaryLockerRobot(List<Locker> lockers){
+    PrimaryLockerRobot(List<Locker> lockers){
         this.lockers = lockers;
     }
 
-    public Ticket store(Bag bag){
+    Ticket store(Bag bag){
         for (Locker locker : lockers){
             if (!locker.isFull()){
                 return locker.store(bag);
@@ -21,7 +21,7 @@ public class PrimaryLockerRobot {
         throw new NoRoomException();
     }
 
-    public Bag pickUp(Ticket ticket) {
+    Bag pickUp(Ticket ticket) {
        for (Locker locker : lockers){
            if(locker.contains(ticket)){
                return locker.pickUp(ticket);
