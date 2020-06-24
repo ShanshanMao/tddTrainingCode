@@ -53,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/LockerRobotManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="171" column="79" selection-start-line="171" selection-start-column="79" selection-end-line="171" selection-end-column="79" />
+            <state relative-caret-position="296">
+              <caret line="183" column="48" selection-start-line="183" selection-start-column="48" selection-end-line="183" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -291,7 +291,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592978167050" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592978389263" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -320,21 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LockerRobotManagerTest.should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager_manage_2_robot_lockers">
-    <configuration name="LockerRobotManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TDDLockerHomework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tdd.Locker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tdd.Locker" />
-      <option name="MAIN_CLASS_NAME" value="com.tdd.Locker.LockerRobotManagerTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.LockerRobotManagerTest.should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_1_robot_locker_and_1_locker">
     <configuration name="LockerRobotManagerTest.should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TDDLockerHomework" />
       <extension name="coverage">
@@ -362,6 +348,22 @@
       <option name="PACKAGE_NAME" value="com.tdd.Locker" />
       <option name="MAIN_CLASS_NAME" value="com.tdd.Locker.LockerRobotManagerTest" />
       <option name="METHOD_NAME" value="should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager_manage_2_robot_lockers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LockerRobotManagerTest.should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_1_robot_locker_and_1_locker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TDDLockerHomework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tdd.Locker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tdd.Locker" />
+      <option name="MAIN_CLASS_NAME" value="com.tdd.Locker.LockerRobotManagerTest" />
+      <option name="METHOD_NAME" value="should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_1_robot_locker_and_1_locker" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -400,19 +402,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.LockerRobotManagerTest" />
       <item itemvalue="JUnit.LockerRobotManagerTest.should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager" />
       <item itemvalue="JUnit.LockerRobotManagerTest.should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_2_robot_locker" />
       <item itemvalue="JUnit.LockerRobotManagerTest.should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_2_robot_lockers" />
       <item itemvalue="JUnit.LockerRobotManagerTest.should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager_manage_2_robot_lockers" />
+      <item itemvalue="JUnit.LockerRobotManagerTest.should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_1_robot_locker_and_1_locker" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LockerRobotManagerTest.should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_1_robot_locker_and_1_locker" />
         <item itemvalue="JUnit.LockerRobotManagerTest.should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager_manage_2_robot_lockers" />
         <item itemvalue="JUnit.LockerRobotManagerTest.should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_2_robot_lockers" />
         <item itemvalue="JUnit.LockerRobotManagerTest.should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_2_robot_locker" />
         <item itemvalue="JUnit.LockerRobotManagerTest.should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager" />
-        <item itemvalue="JUnit.LockerRobotManagerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -430,9 +432,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LockerRobotManagerTest_should_store_in_1st_locker_and_return_ticket_when_store_bag_given_manager_robot_manage_1_locker_has_not_full_and_1_robot_locker_is_full - 2020.06.24 at 12h 44m 14s.xml">
-      <configuration name="LockerRobotManagerTest.should_store_in_1st_locker_and_return_ticket_when_store_bag_given_manager_robot_manage_1_locker_has_not_full_and_1_robot_locker_is_full" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LockerRobotManagerTest_should_store_in_locker_is_fail_when_store_bag_given_manager_robot_manage_1_robot_locker_and_1__locker_both_full - 2020.06.24 at 12h 47m 45s.xml">
       <configuration name="LockerRobotManagerTest.should_store_in_locker_is_fail_when_store_bag_given_manager_robot_manage_1_robot_locker_and_1__locker_both_full" configurationId="JUnit" />
     </history-entry>
@@ -460,6 +459,9 @@
     <history-entry file="LockerRobotManagerTest_should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_2_robot_lockers - 2020.06.24 at 13h 55m 30s.xml">
       <configuration name="LockerRobotManagerTest.should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_2_robot_lockers" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LockerRobotManagerTest_should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager_manage_2_robot_lockers - 2020.06.24 at 13h 57m 05s.xml">
+      <configuration name="LockerRobotManagerTest.should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager_manage_2_robot_lockers" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,12 +486,12 @@
       <window_info id="Favorites" order="7" sideWeight="0.5017182" side_tool="true" weight="0.16137566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3113924" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3113924" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3288948" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49933863" weight="0.22405063" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49933863" visible="true" weight="0.22405063" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5006614" side_tool="true" weight="0.22503328" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.310253" />
@@ -783,8 +785,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/LockerRobotManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="171" column="79" selection-start-line="171" selection-start-column="79" selection-end-line="171" selection-end-column="79" />
+        <state relative-caret-position="296">
+          <caret line="183" column="48" selection-start-line="183" selection-start-column="48" selection-end-line="183" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

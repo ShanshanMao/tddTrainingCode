@@ -174,4 +174,19 @@ public class LockerRobotManagerTest {
         lockerRobotManager.pickUp(new Ticket());
     }
 
+    @Test
+    public void should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_1_robot_locker_and_1_locker(){
+        firstRobot = new PrimaryLockerRobot(asList(new Locker(1)));
+        Locker firstlocker = new Locker(1);
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(firstlocker),asList(firstRobot));
+
+        Bag myBag = new Bag();
+        Ticket ticket = lockerRobotManager.store(myBag);
+        assertNotNull(ticket);
+
+        Bag bag = lockerRobotManager.pickUp(ticket);
+        assertSame(myBag,bag);
+        assertFalse(lockerRobotManager.isValid(ticket));
+    }
+
 }
