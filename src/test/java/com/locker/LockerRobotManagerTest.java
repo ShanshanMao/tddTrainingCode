@@ -1,5 +1,6 @@
 package com.locker;
 
+import com.locker.exception.NoRoomException;
 import com.sun.corba.se.impl.orbutil.LogKeywords;
 import org.junit.Assert;
 import org.junit.Test;
@@ -28,5 +29,15 @@ public class LockerRobotManagerTest {
         Ticket ticket = lockerRobotManager.store(myBag);
         Assert.assertNotNull(ticket);
         Assert.assertSame(myBag,secondLocker.pickUp(ticket));
+    }
+
+    @Test(expected = NoRoomException.class)
+    public void should_return_a_NoRoomException_when_LockerRobotManager_have_2_full_lockers_and_no_robot(){
+        Locker firstLocker = new Locker(1);
+        firstLocker.store(new Bag());
+        Locker secondLocker = new Locker(1);
+        secondLocker.store(new Bag());
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(Arrays.asList(firstLocker, secondLocker));
+        lockerRobotManager.store(new Bag());
     }
 }
