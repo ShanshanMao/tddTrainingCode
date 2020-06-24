@@ -6,20 +6,19 @@ import com.locker.exception.NoRoomException;
 import java.util.List;
 
 public class LockerRobotManager {
-    public List<Locker> lockers;
-    public List<Robot> robots;
+    private List<Locker> lockers;
+    private List<Robot> robots;
 
     public LockerRobotManager(List<Locker> lockers, List<Robot> robots) {
         this.lockers = lockers;
         this.robots = robots;
     }
 
-    public Ticket store(Bag myBag) {
+    Ticket store(Bag myBag) {
         for (Robot robot : robots) {
             try {
                 return new ManagerTicket(robot.store(myBag));
-            } catch (NoRoomException e) {
-                continue;
+            } catch (NoRoomException ignored) {
             }
         }
 
@@ -31,13 +30,12 @@ public class LockerRobotManager {
         throw new NoRoomException();
     }
 
-    public Bag pickUp(Ticket ticket) {
+    Bag pickUp(Ticket ticket) {
         if (ticket instanceof ManagerTicket) {
             for (Robot robot : robots) {
                 try {
                     return robot.pickUp(((ManagerTicket) ticket).getTicket());
-                } catch ( InvalidTicketException e) {
-                    continue;
+                } catch (InvalidTicketException ignored) {
                 }
             }
 
