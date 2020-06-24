@@ -99,4 +99,15 @@ public class LockerRobotManagerTest {
         Assert.assertNotNull(ticket);
         Assert.assertSame(myBag,locker.pickUp(ticket));
     }
+
+    @Test(expected = NoRoomException.class)
+    public void should_return_NoRoomException_when_LockerRobotManager_have_1_full_robot_and_1_full_locker(){
+        PrimaryLockerRobot lockerRobot = new PrimaryLockerRobot(Collections.singletonList(new Locker(1)));
+        lockerRobot.store(new Bag());
+        Locker locker = new Locker(1);
+        locker.store(new Bag());
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(Collections.singletonList(locker), Collections.singletonList(lockerRobot));
+        Bag myBag = new Bag();
+        lockerRobotManager.store(myBag);
+    }
 }
