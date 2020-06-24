@@ -63,4 +63,17 @@ public class LockerRobotManagerTest {
         Assert.assertNotNull(ticket);
         Assert.assertSame(myBag,smartLockerRobot.pickUp(ticket));
     }
+
+    @Test(expected = NoRoomException.class)
+    public void should_return_a_NoRoomException_when_LockerRobotManager_have_2_full_robot_and_no_locker(){
+        PrimaryLockerRobot primaryLockerRobot = new PrimaryLockerRobot(Arrays.asList(new Locker(1),new Locker(1)));
+        primaryLockerRobot.store(new Bag());
+        primaryLockerRobot.store(new Bag());
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(Arrays.asList(new Locker(1),new Locker(1)));
+        smartLockerRobot.store(new Bag());
+        smartLockerRobot.store(new Bag());
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(Collections.emptyList(), Arrays.asList(primaryLockerRobot, smartLockerRobot));
+        Bag myBag = new Bag();
+        lockerRobotManager.store(myBag);
+    }
 }
