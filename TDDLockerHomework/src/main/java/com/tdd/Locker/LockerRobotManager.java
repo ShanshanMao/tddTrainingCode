@@ -21,5 +21,4 @@ public class LockerRobotManager extends LockerRobot {
         }
         throw new NoRoomException();
     }
-
 }

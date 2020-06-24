@@ -59,4 +59,29 @@ public class LockerRobotManagerTest {
         assertNotNull(ticket);
         assertSame(myBag,firstRobot.pickUp(ticket));
     }
+
+    @Test
+    public void should_store_in_2nd_robot_locker_and_return_ticket_when_store_bag_given_manager_robot_manage_two_robot_and_1st_robot_locker_is_full_and_2nd_robot_locker_not_full(){
+        firstRobot = new PrimaryLockerRobot(asList(new Locker(1)));
+        secondRobot = new SmartLockerRobot(asList(new Locker(5)));
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(),asList(firstRobot,secondRobot));
+
+        lockerRobotManager.store(new Bag());
+        Bag myBag = new Bag();
+        Ticket ticket = lockerRobotManager.store(myBag);
+
+        assertNotNull(ticket);
+        assertSame(myBag,secondRobot.pickUp(ticket));
+    }
+
+    @Test(expected = NoRoomException.class)
+    public void should_store_in_locker_is_fail_when_store_bag_given_manager_robot_manage_two_robot_and_robot_locker_both_full(){
+        firstRobot = new PrimaryLockerRobot(asList(new Locker(1)));
+        secondRobot = new SmartLockerRobot(asList(new Locker(1)));
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(),asList(firstRobot,secondRobot));
+        lockerRobotManager.store(new Bag());
+        lockerRobotManager.store(new Bag());
+
+        lockerRobotManager.store(new Bag());
+    }
 }
