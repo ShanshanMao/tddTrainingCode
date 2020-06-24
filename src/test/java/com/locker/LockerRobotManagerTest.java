@@ -1,5 +1,6 @@
 package com.locker;
 
+import com.locker.exception.InvalidTicketException;
 import com.locker.exception.NoRoomException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -119,5 +120,15 @@ public class LockerRobotManagerTest {
         Bag myBag = new Bag();
         Ticket ticket = lockerRobotManager.store(myBag);
         Assert.assertSame(myBag, lockerRobotManager.pickUp(ticket));
+    }
+
+    @Test(expected = InvalidTicketException.class)
+    public void should_return_InvalidTicketException_when_pickUp_bag_with_inValid_ticket_and_LockerRobotManager_have_2_lockers_but_no_robot(){
+        Locker firstLocker = new Locker(1);
+        Locker secondLocker = new Locker(1);
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(Arrays.asList(firstLocker, secondLocker), Collections.emptyList());
+        Bag myBag = new Bag();
+        lockerRobotManager.store(myBag);
+        Assert.assertSame(myBag, lockerRobotManager.pickUp(new Ticket()));
     }
 }
