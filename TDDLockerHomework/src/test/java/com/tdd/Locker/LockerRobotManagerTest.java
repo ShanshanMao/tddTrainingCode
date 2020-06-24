@@ -189,4 +189,13 @@ public class LockerRobotManagerTest {
         assertFalse(lockerRobotManager.isValid(ticket));
     }
 
+    @Test(expected = InvalidTicketException.class)
+    public void should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager_manage_1_robot_locker_and_1_locker() {
+        firstRobot = new PrimaryLockerRobot(asList(new Locker(1)));
+        Locker firstlocker = new Locker(1);
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(firstlocker),asList(firstRobot));
+
+        lockerRobotManager.pickUp(new Ticket());
+    }
+
 }
