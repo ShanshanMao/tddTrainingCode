@@ -115,4 +115,15 @@ public class LockerRobotManagerTest {
         assertTrue(lockerRobotManager.isValid(ticket));
     }
 
+    @Test(expected = NoRoomException.class)
+    public void should_store_in_locker_is_fail_when_store_bag_given_manager_robot_manage_1_robot_locker_and_1__locker_both_full(){
+        firstRobot = new PrimaryLockerRobot(asList(new Locker(1)));
+        Locker firstlocker = new Locker(1);
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(firstlocker),asList(firstRobot));
+        lockerRobotManager.store(new Bag());
+        lockerRobotManager.store(new Bag());
+
+        lockerRobotManager.store(new Bag());
+    }
+
 }
