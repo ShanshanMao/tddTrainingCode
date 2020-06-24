@@ -21,4 +21,13 @@ public class LockerRobotManager extends PrimaryLockerRobot {
         }
         return super.store(myBag);
     }
+
+    public Bag pickUp(Ticket ticket){
+        for (LockerRobot lockerRobot:lockerRobots){
+            if (lockerRobot.isValid(ticket)){
+                return lockerRobot.pickUp(ticket);
+            }
+        }
+        return super.pickUp(ticket);
+    }
 }

@@ -1,5 +1,6 @@
 package com.tdd.Locker;
 
+import com.tdd.Locker.exception.InvalidTicketException;
 import com.tdd.Locker.exception.NoRoomException;
 import org.junit.Test;
 
@@ -124,6 +125,29 @@ public class LockerRobotManagerTest {
         lockerRobotManager.store(new Bag());
 
         lockerRobotManager.store(new Bag());
+    }
+
+    @Test
+    public void should_return_a_bag_success_when_pick_up_bag_given_a_valid_ticket_to_robot_manager_and_manage_2_lockers(){
+        Locker firstlocker = new Locker(1);
+        Locker secondlocker = new Locker(1);
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(firstlocker,secondlocker),asList());
+        Bag myBag = new Bag();
+        Ticket ticket = lockerRobotManager.store(myBag);
+        assertSame(firstlocker.find(ticket),myBag);
+
+        Bag bag = lockerRobotManager.pickUp(ticket);
+        assertSame(myBag,bag);
+        assertNull(firstlocker.find(ticket));
+    }
+
+    @Test(expected = InvalidTicketException.class)
+    public void should_return_a_bag_fail_when_pick_up_given_a_invalid_ticket_to_robot_manager() {
+        Locker firstlocker = new Locker(1);
+        Locker secondlocker = new Locker(1);
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(firstlocker,secondlocker),asList());
+
+        lockerRobotManager.pickUp(new Ticket());
     }
 
 }
