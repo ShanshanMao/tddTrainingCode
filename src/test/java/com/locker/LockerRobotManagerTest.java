@@ -131,4 +131,14 @@ public class LockerRobotManagerTest {
         lockerRobotManager.store(myBag);
         Assert.assertSame(myBag, lockerRobotManager.pickUp(new Ticket()));
     }
+
+    @Test
+    public void should_return_bag_when_pickUp_bag_with_valid_ticket_and_LockerRobotManager_have_no_locker_but_2_robot_with_available_capacity(){
+        PrimaryLockerRobot primaryLockerRobot = new PrimaryLockerRobot(Collections.singletonList(new Locker(1)));
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(Collections.singletonList(new Locker(1)));
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(Collections.emptyList(), Arrays.asList(primaryLockerRobot, smartLockerRobot));
+        Bag myBag = new Bag();
+        Ticket ticket = lockerRobotManager.store(myBag);
+        Assert.assertSame(myBag, lockerRobotManager.pickUp(ticket));
+    }
 }
