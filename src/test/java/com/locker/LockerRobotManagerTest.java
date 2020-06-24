@@ -161,4 +161,13 @@ public class LockerRobotManagerTest {
         Ticket ticket = lockerRobotManager.store(myBag);
         Assert.assertSame(myBag, lockerRobotManager.pickUp(ticket));
     }
+
+    @Test(expected = InvalidTicketException.class)
+    public void should_return_InvalidTicketException_when_pickUp_bag_with_inValid_ticket_and_LockerRobotManager_have_1_locker_and_1_robot(){
+        PrimaryLockerRobot primaryLockerRobot = new PrimaryLockerRobot(Collections.singletonList(new Locker(1)));
+        Locker locker = new Locker(1);
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(Collections.singletonList(locker), Collections.singletonList(primaryLockerRobot));
+        lockerRobotManager.store(new Bag());
+        lockerRobotManager.pickUp(new Ticket());
+    }
 }
