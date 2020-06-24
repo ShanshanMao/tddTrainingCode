@@ -43,6 +43,6 @@ public class LockerRobotManager {
         for (Locker locker : lockers) {
             return locker.pickUp(ticket);
         }
-        throw new NoRoomException();
+        throw new InvalidTicketException();
     }
 }
