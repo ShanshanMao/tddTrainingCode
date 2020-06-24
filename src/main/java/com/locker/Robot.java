@@ -1,6 +1,7 @@
 package com.locker;
 
 public class Robot {
+
     public Ticket store(Bag myBag) {
         return null;
     }

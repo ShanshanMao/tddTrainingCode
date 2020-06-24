@@ -31,4 +31,12 @@ class PrimaryLockerRobot extends Robot {
        }
        throw new InvalidTicketException();
     }
+    public boolean containsBag(Bag myBag){
+        for (Locker locker : lockers) {
+            if (locker.containsBag(myBag)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

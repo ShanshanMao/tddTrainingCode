@@ -44,6 +44,10 @@ class Locker {
         return bagMap.containsKey(ticket);
     }
 
+    boolean containsBag(Bag myBag) {
+        return bagMap.containsValue(myBag);
+    }
+
     int getAvailableCapacity() {
         return initCapacity - bagMap.size();
     }

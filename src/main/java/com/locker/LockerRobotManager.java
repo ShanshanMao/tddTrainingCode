@@ -17,7 +17,7 @@ public class LockerRobotManager {
     public Ticket store(Bag myBag) {
         for (Robot robot : robots) {
             try {
-                return robot.store(myBag);
+                return new ManagerTicket(robot.store(myBag));
             } catch (NoRoomException e) {
                 continue;
             }
@@ -25,23 +25,26 @@ public class LockerRobotManager {
 
         for (Locker locker : lockers) {
             if (!locker.isFull()) {
-                return locker.store(myBag);
+                return new ManagerTicket(locker.store(myBag));
             }
         }
         throw new NoRoomException();
     }
 
     public Bag pickUp(Ticket ticket) {
-        for (Robot robot : robots) {
-            try {
-                return robot.pickUp(ticket);
-            } catch ( InvalidTicketException e) {
-                continue;
+        if (ticket instanceof ManagerTicket) {
+            for (Robot robot : robots) {
+                try {
+                    return robot.pickUp(((ManagerTicket) ticket).getTicket());
+                } catch ( InvalidTicketException e) {
+                    continue;
+                }
             }
-        }
 
-        for (Locker locker : lockers) {
-            return locker.pickUp(ticket);
+            for (Locker locker : lockers) {
+                return locker.pickUp(((ManagerTicket) ticket).getTicket());
+            }
+            throw new InvalidTicketException();
         }
         throw new InvalidTicketException();
     }
