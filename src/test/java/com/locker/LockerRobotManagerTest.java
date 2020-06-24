@@ -1,18 +1,17 @@
 package com.locker;
 
 import com.locker.exception.NoRoomException;
-import com.sun.corba.se.impl.orbutil.LogKeywords;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.concurrent.locks.Lock;
+import java.util.Collections;
 
 public class LockerRobotManagerTest {
     @Test
     public void should_return_a_ticket_and_store_in_1st_locker_when_LockerRobotManager_have_2_locker_with_available_capacity_and_no_robot() {
         Locker firstLocker = new Locker(1);
-        LockerRobotManager lockerRobotManager = new LockerRobotManager(Arrays.asList(firstLocker, new Locker(1)));
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(Arrays.asList(firstLocker, new Locker(1)),Collections.emptyList());
         Bag myBag = new Bag();
         Ticket ticket = lockerRobotManager.store(myBag);
         Assert.assertNotNull(ticket);
@@ -24,7 +23,7 @@ public class LockerRobotManagerTest {
         Locker firstLocker = new Locker(1);
         firstLocker.store(new Bag());
         Locker secondLocker = new Locker(1);
-        LockerRobotManager lockerRobotManager = new LockerRobotManager(Arrays.asList(firstLocker, secondLocker));
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(Arrays.asList(firstLocker, secondLocker),Collections.emptyList());
         Bag myBag = new Bag();
         Ticket ticket = lockerRobotManager.store(myBag);
         Assert.assertNotNull(ticket);
@@ -37,7 +36,18 @@ public class LockerRobotManagerTest {
         firstLocker.store(new Bag());
         Locker secondLocker = new Locker(1);
         secondLocker.store(new Bag());
-        LockerRobotManager lockerRobotManager = new LockerRobotManager(Arrays.asList(firstLocker, secondLocker));
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(Arrays.asList(firstLocker, secondLocker),Collections.emptyList());
         lockerRobotManager.store(new Bag());
+    }
+
+    @Test
+    public void should_return_a_ticket_and_store_in_1st_robot_when_LockerRobotManager_have_2_robot_with_available_capacity_but_no_locker() {
+        PrimaryLockerRobot primaryLockerRobot = new PrimaryLockerRobot(Arrays.asList(new Locker(1),new Locker(1)));
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(Arrays.asList(new Locker(1),new Locker(1)));
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(null, Arrays.asList(primaryLockerRobot, smartLockerRobot));
+        Bag myBag = new Bag();
+        Ticket ticket = lockerRobotManager.store(myBag);
+        Assert.assertNotNull(ticket);
+        Assert.assertSame(myBag,primaryLockerRobot.pickUp(ticket));
     }
 }

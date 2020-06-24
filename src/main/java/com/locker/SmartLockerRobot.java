@@ -8,14 +8,15 @@ import java.util.List;
 import java.util.Optional;
 
 
-class SmartLockerRobot {
+class SmartLockerRobot extends Robot {
     private final List<Locker> lockers;
 
     SmartLockerRobot(List<Locker> lockers) {
         this.lockers = lockers;
     }
 
-    Ticket store(Bag bag) {
+    @Override
+    public Ticket store(Bag bag) {
 
         Optional<Locker> maxCapacity = lockers.stream().max(Comparator.comparing(Locker::getAvailableCapacity));
         if ((maxCapacity.isPresent())){
@@ -24,7 +25,8 @@ class SmartLockerRobot {
         throw new NoRoomException();
     }
 
-    Bag pickUp(Ticket ticket) {
+    @Override
+    public Bag pickUp(Ticket ticket) {
         for (Locker locker:lockers){
             if (locker.contains(ticket)){
                 return locker.pickUp(ticket);

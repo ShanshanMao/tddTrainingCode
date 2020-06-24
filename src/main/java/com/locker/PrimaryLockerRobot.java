@@ -3,16 +3,17 @@ package com.locker;
 import com.locker.exception.InvalidTicketException;
 import com.locker.exception.NoRoomException;
 
-import java.util.*;
+import java.util.List;
 
-class PrimaryLockerRobot {
+class PrimaryLockerRobot extends Robot {
     private final List<Locker> lockers;
 
     PrimaryLockerRobot(List<Locker> lockers){
         this.lockers = lockers;
     }
 
-    Ticket store(Bag bag){
+    @Override
+    public Ticket store(Bag bag){
         for (Locker locker : lockers){
             if (!locker.isFull()){
                 return locker.store(bag);
@@ -21,7 +22,8 @@ class PrimaryLockerRobot {
         throw new NoRoomException();
     }
 
-    Bag pickUp(Ticket ticket) {
+    @Override
+    public Bag pickUp(Ticket ticket) {
        for (Locker locker : lockers){
            if(locker.contains(ticket)){
                return locker.pickUp(ticket);
