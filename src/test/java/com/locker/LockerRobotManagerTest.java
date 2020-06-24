@@ -179,4 +179,13 @@ public class LockerRobotManagerTest {
         Ticket ticket = lockerRobotManager.store(new Bag());
         primaryLockerRobot.pickUp(ticket);
     }
+
+    @Test(expected = InvalidTicketException.class)
+    public void should_return_InvalidTicketException_when_store_bag_via_LockerRobotManager_but_pickUp_from_SmartLockerRobot(){
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(Collections.singletonList(new Locker(1)));
+        Locker locker = new Locker(1);
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(Collections.singletonList(locker), Collections.singletonList(smartLockerRobot));
+        Ticket ticket = lockerRobotManager.store(new Bag());
+        smartLockerRobot.pickUp(ticket);
+    }
 }
