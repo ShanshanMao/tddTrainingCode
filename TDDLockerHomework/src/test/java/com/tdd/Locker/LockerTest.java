@@ -3,9 +3,6 @@ package com.tdd.Locker;
  * created by ssmao on 20200613
  */
 
-import com.tdd.Locker.Bag;
-import com.tdd.Locker.Locker;
-import com.tdd.Locker.Ticket;
 import com.tdd.Locker.exception.InvalidTicketException;
 import com.tdd.Locker.exception.NoRoomException;
 import lombok.*;

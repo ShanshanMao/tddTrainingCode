@@ -11,10 +11,10 @@ public class PrimaryLockerRobot extends LockerRobot{
 
     public Ticket store(Bag myBag){
         for (Locker locker : lockers){
-            if (!locker.isFull()){
+            if (locker.isAvailable()){
                 return locker.store(myBag);
             }
         }
-        throw new NoRoomException();
+        throw new NoRoomException("locker is full");
     }
 }

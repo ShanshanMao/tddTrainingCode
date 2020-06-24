@@ -2,7 +2,6 @@ package com.tdd.Locker;
 
 import com.tdd.Locker.exception.InvalidTicketException;
 import com.tdd.Locker.exception.NoRoomException;
-import lombok.var;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,22 +17,19 @@ public class Locker {
     }
 
     public Ticket store(Bag bag) {
-        if (size<=0){
-            throw new NoRoomException();
+        if (isFull()){
+            throw new NoRoomException("locker is full");
         }
-        var ticket = new Ticket();
+        Ticket ticket = new Ticket();
         bagMap.put(ticket, bag);
-        size--;
         return ticket;
     }
 
     public Bag pickUp(Ticket ticket) {
-        if (!bagMap.containsKey(ticket)) {
+        if (!contains(ticket)) {
             throw new InvalidTicketException();
         }
-        var bag = bagMap.get(ticket);
-        bagMap.remove(ticket);
-        return bag;
+        return bagMap.remove(ticket) ;
     }
 
 
@@ -45,12 +41,16 @@ public class Locker {
         return bagMap.containsKey(ticket);
     }
 
-    public  int getCapacity() {
+    public  int getValidCapacity() {
         return size - bagMap.size();
     }
 
     public boolean isAvailable() {
-        return getCapacity()>0;
+        return getValidCapacity()>0;
+    }
+
+    public Bag find(Ticket ticket) {
+        return bagMap.get(ticket);
     }
 }
 

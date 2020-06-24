@@ -3,6 +3,7 @@ package com.tdd.Locker;
 import com.tdd.Locker.exception.NoRoomException;
 import org.junit.Test;
 
+import static org.junit.Assert.*;
 import static java.util.Arrays.asList;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
@@ -11,6 +12,7 @@ public class LockerRobotManagerTest {
 
     private PrimaryLockerRobot firstRobot;
     private SmartLockerRobot secondRobot;
+
 
     @Test
     public void should_store_in_1st_locker_and_return_ticket_when_store_bag_given_manager_robot_manage_two_lockers_and_both_not_full(){
@@ -22,7 +24,7 @@ public class LockerRobotManagerTest {
         Ticket ticket = lockerRobotManager.store(myBag);
 
         assertNotNull(ticket);
-        assertSame(myBag,firstlocker.pickUp(ticket));
+        assertSame(myBag,firstlocker.find(ticket));
     }
 
     @Test
@@ -35,7 +37,7 @@ public class LockerRobotManagerTest {
         Ticket ticket = lockerRobotManager.store(myBag);
 
         assertNotNull(ticket);
-        assertSame(myBag,secondlocker.pickUp(ticket));
+        assertSame(myBag,secondlocker.find(ticket));
     }
 
     @Test(expected = NoRoomException.class)
@@ -86,7 +88,7 @@ public class LockerRobotManagerTest {
     }
 
     @Test
-    public void should_store_in_1st_locker_and_return_ticket_when_store_bag_given_manager_robot_manage_1_locker_and_1_robot_locker_both_not_full(){
+    public void should_store_in_1st_robot_locker_and_return_ticket_when_store_bag_given_manager_robot_manage_1_locker_and_1_robot_locker_both_not_full(){
         firstRobot = new PrimaryLockerRobot(asList(new Locker(2)));
         Locker firstlocker = new Locker(2);
         LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(firstlocker),asList(firstRobot));
@@ -97,4 +99,20 @@ public class LockerRobotManagerTest {
         assertNotNull(ticket);
         assertSame(myBag,firstRobot.pickUp(ticket));
     }
+
+    @Test
+    public void should_store_in_1st_locker_and_return_ticket_when_store_bag_given_manager_robot_manage_1_locker_has_not_full_and_1_robot_locker_is_full(){
+        firstRobot = new PrimaryLockerRobot(asList(new Locker(1)));
+        Locker firstlocker = new Locker(2);
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(firstlocker),asList(firstRobot));
+        lockerRobotManager.store(new Bag());
+
+        Bag myBag = new Bag();
+        Ticket ticket = lockerRobotManager.store(myBag);
+
+        assertNotNull(ticket);
+        assertSame(firstlocker.find(ticket),myBag);
+        assertTrue(lockerRobotManager.isValid(ticket));
+    }
+
 }

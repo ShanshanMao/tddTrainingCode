@@ -17,7 +17,6 @@ public abstract class LockerRobot {
                 return locker.pickUp(ticket);
             }
         }
-
         throw new InvalidTicketException();
     }
 
@@ -25,5 +24,9 @@ public abstract class LockerRobot {
 
     public  boolean isAvailable(){
         return lockers.stream().anyMatch(Locker::isAvailable);
+    }
+
+    public boolean isValid(Ticket ticket){
+        return lockers.stream().anyMatch(locker -> locker.contains(ticket));
     }
 }

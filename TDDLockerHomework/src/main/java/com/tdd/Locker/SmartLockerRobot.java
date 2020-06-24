@@ -14,10 +14,10 @@ public class SmartLockerRobot extends LockerRobot{
 
     public Ticket store(Bag bag) {
 
-        Optional<Locker> maxCapacity = lockers.stream().max(Comparator.comparing(Locker::getCapacity));
+        Optional<Locker> maxCapacity = lockers.stream().max(Comparator.comparing(Locker::getValidCapacity));
         if ((maxCapacity.isPresent())){
             return maxCapacity.get().store(bag);
         }
-        throw new NoRoomException();
+        throw new NoRoomException("locker is full");
     }
 }

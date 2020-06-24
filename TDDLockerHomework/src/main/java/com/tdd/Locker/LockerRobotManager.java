@@ -4,7 +4,7 @@ import com.tdd.Locker.exception.NoRoomException;
 
 import java.util.List;
 
-public class LockerRobotManager extends LockerRobot {
+public class LockerRobotManager extends PrimaryLockerRobot {
 
     private List<LockerRobot> lockerRobots;
 
@@ -19,6 +19,6 @@ public class LockerRobotManager extends LockerRobot {
                 return lockerRobot.store(myBag);
             }
         }
-        throw new NoRoomException();
+        return super.store(myBag);
     }
 }
