@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac65864c-0611-470c-8a06-c78d19df1daf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/LockerRobotDirector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/LockerRobotDirectorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/Tasking.text" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/Tasking.text" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/Locker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/LockerRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/LockerRobot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/LockerRobotManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/LockerRobotManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/PrimaryLockerRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/PrimaryLockerRobot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SmartLockerRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/main/java/com/tdd/Locker/SmartLockerRobot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/target/classes/META-INF/TDDLockerHomework.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/LockerRobotDirectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/src/test/java/com/tdd/Locker/LockerRobotDirectorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TDDLockerHomework/target/classes/com/tdd/Locker/Locker.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/target/classes/com/tdd/Locker/Locker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TDDLockerHomework/target/classes/com/tdd/Locker/LockerRobot.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/target/classes/com/tdd/Locker/LockerRobot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TDDLockerHomework/target/classes/com/tdd/Locker/LockerRobotManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/target/classes/com/tdd/Locker/LockerRobotManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/target/classes/com/tdd/Locker/PrimaryLockerRobot.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/target/classes/com/tdd/Locker/PrimaryLockerRobot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/target/classes/com/tdd/Locker/SmartLockerRobot.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/target/classes/com/tdd/Locker/SmartLockerRobot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/target/test-classes/META-INF/TDDLockerHomework.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TDDLockerHomework/target/test-classes/com/tdd/Locker/LockerRobotDirectorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDDLockerHomework/target/test-classes/com/tdd/Locker/LockerRobotDirectorTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +79,7 @@
       <recent name="com.GiledeRose" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LockerRobotDirectorTest">
+  <component name="RunManager" selected="JUnit.LockerRobotDirectorTest.should_return_report_when_LockerRobotDirector_check_report_given_LockerRobotManager_manage_1_locker_and_1_robot">
     <configuration name="LockerRobotDirectorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TDDLockerHomework" />
       <extension name="coverage">
@@ -189,9 +178,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LockerRobotDirectorTest.should_return_report_when_LockerRobotDirector_check_report_given_LockerRobotManager_manage_1_locker_and_1_robot" />
         <item itemvalue="JUnit.LockerRobotDirectorTest" />
         <item itemvalue="JUnit.LockerRobotDirectorTest.should_return_report_when_LockerRobotDirector_check_report_given_LockerRobotManager_manage_2_robots_each_with_1_locker" />
-        <item itemvalue="JUnit.LockerRobotDirectorTest.should_return_report_when_LockerRobotDirector_check_report_given_LockerRobotManager_manage_1_locker_and_1_robot" />
         <item itemvalue="JUnit.LockerRobotDirectorTest.should_return_report_when_LockerRobotDirector_check_report_given_LockerRobotManager_manage_2_lockers" />
         <item itemvalue="JUnit.com.tdd.Locker in TDDLockerHomework" />
       </list>
@@ -220,30 +209,30 @@
     </todo-panel>
   </component>
   <component name="WindowStateProjectService">
-    <state x="161" y="102" width="1394" height="708" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1593583515454">
+    <state x="161" y="102" width="1394" height="708" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1593585030846">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="161" y="102" width="1394" height="708" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1593585001154" />
+    <state x="161" y="102" width="1394" height="708" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1593585030846" />
+    <state width="1638" height="257" key="GridCell.Tab.0.bottom" timestamp="1593584998974">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="161" y="102" width="1394" height="708" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1593583515454" />
-    <state x="161" y="123" width="1394" height="692" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1593579628124" />
-    <state width="1638" height="250" key="GridCell.Tab.0.bottom" timestamp="1593583517600">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1638" height="250" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1593583517600" />
+    <state width="1638" height="257" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1593584998974" />
     <state width="1562" height="212" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1593579628049" />
-    <state width="1638" height="250" key="GridCell.Tab.0.center" timestamp="1593583517599">
+    <state width="1638" height="257" key="GridCell.Tab.0.center" timestamp="1593584998973">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="250" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1593583517599" />
+    <state width="1638" height="257" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1593584998973" />
     <state width="1562" height="212" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1593579628049" />
-    <state width="1638" height="250" key="GridCell.Tab.0.left" timestamp="1593583517598">
+    <state width="1638" height="257" key="GridCell.Tab.0.left" timestamp="1593584998973">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="250" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1593583517598" />
+    <state width="1638" height="257" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1593584998973" />
     <state width="1562" height="212" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1593579628048" />
-    <state width="1638" height="250" key="GridCell.Tab.0.right" timestamp="1593583517600">
+    <state width="1638" height="257" key="GridCell.Tab.0.right" timestamp="1593584998974">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="250" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1593583517600" />
+    <state width="1638" height="257" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1593584998974" />
     <state width="1562" height="212" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1593579628049" />
   </component>
   <component name="XDebuggerManager">
