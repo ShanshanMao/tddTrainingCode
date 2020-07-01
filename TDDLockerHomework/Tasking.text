@@ -112,8 +112,8 @@ Then  报表内容：M 7 9
                   L 7 8
 
 
-Given  LockerRobotDirector管理一个LockerRobotManager，LockerRobotManager只管理两个Locker，并且locker的可用容量和容量分别为：2，3；4，4。存在一个不被LockerRobotManage管理的Locker，其中Locker的可用容量和容量分别为：7  8
+Given  LockerRobotDirector管理一个LockerRobotManager，LockerRobotManager只管理两个Locker，并且locker的可用容量和容量分别为：2，3；3，4。存在一个不被LockerRobotManage管理的Locker，其中Locker的可用容量和容量分别为：7  8
 When  LockerRobotDirector统计报表
-Then   报表内容：M 6 7
+Then   报表内容：M 5 7
                  L 2 3
-                 L 4 4
+                 L 3 4

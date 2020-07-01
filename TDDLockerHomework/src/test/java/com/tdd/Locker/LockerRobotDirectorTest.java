@@ -70,6 +70,27 @@ public class LockerRobotDirectorTest {
         assertEquals(expectReport,report);
     }
 
+    @Test
+    public void should_return_report_when_LockerRobotDirector_check_report_given_LockerRobotManager_manage_2_lockers_and_is_not_manage_other_locker(){
+        Locker firstLocker = new Locker(3);
+        Locker secondLocker = new Locker(4);
+        Locker thirdLocker = new Locker(8);
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(asList(firstLocker,secondLocker),Collections.emptyList());
+        LockerRobotDirector lockerRobotDirector = new LockerRobotDirector(singletonList(lockerRobotManager));
+
+        Bag myBag = new Bag();
+        firstLocker.store(myBag);
+        myBag = new Bag();
+        secondLocker.store(myBag);
+
+        String report = lockerRobotDirector.checkReport();
+        String expectReport = "M 5 7\n" +
+                "\tL 2 3\n"+
+                "\tL 3 4\n";
+        assertEquals(expectReport,report);
+    }
+
+
 
 
 }
