@@ -49,5 +49,27 @@ public class LockerRobotDirectorTest {
         assertEquals(expectReport,report);
     }
 
+    @Test
+    public void should_return_report_when_LockerRobotDirector_check_report_given_LockerRobotManager_manage_2_robots_each_with_1_locker(){
+        SmartLockerRobot smartLockerRobot = new SmartLockerRobot(singletonList(new Locker(1)));
+        PrimaryLockerRobot primaryLockerRobot = new PrimaryLockerRobot(singletonList(new Locker(8)));
+        LockerRobotManager lockerRobotManager = new LockerRobotManager(emptyList(),asList(smartLockerRobot,primaryLockerRobot));
+        LockerRobotDirector lockerRobotDirector = new LockerRobotDirector(singletonList(lockerRobotManager));
+
+        Bag myBag =new Bag();
+        smartLockerRobot.store(myBag);
+        myBag = new Bag();
+        primaryLockerRobot.store(myBag);
+
+        String report = lockerRobotDirector.checkReport();
+        String expectReport = "M 7 9\n"+
+                "\tR 0 1\n"+
+                "\t\tL 0 1\n"+
+                "\tR 7 8\n"+
+                "\t\tL 7 8\n";
+        assertEquals(expectReport,report);
+    }
+
+
 
 }
