@@ -22,11 +22,24 @@ public abstract class LockerRobot {
 
     public abstract Ticket store(Bag myBag);
 
-    public  boolean isAvailable(){
+    public boolean isValid(Ticket ticket){
+        return lockers.stream().anyMatch(locker -> locker.contains(ticket));
+    }
+
+    public boolean isAvailable(){
         return lockers.stream().anyMatch(Locker::isAvailable);
     }
 
-    public boolean isValid(Ticket ticket){
-        return lockers.stream().anyMatch(locker -> locker.contains(ticket));
+    public int getValidCapacity(){
+        return lockers.stream().mapToInt(Locker::getValidCapacity).sum();
+    }
+
+    public int getAllCapacity(){
+        return lockers.stream().mapToInt(Locker::getAllCapacity).sum();
+    }
+
+    public String getReport(){
+        String report = "\tR " + getValidCapacity()+" "+getAllCapacity()+"\n";
+        return lockers.stream().map(Locker::getReport).reduce(report,(partialReport,lockerReport)->partialReport+"\t"+ lockerReport);
     }
 }

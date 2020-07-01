@@ -17,7 +17,7 @@ public class Locker {
     }
 
     public Ticket store(Bag bag) {
-        if (isFull()){
+        if (bagMap.size()>=size){
             throw new NoRoomException("locker is full");
         }
         Ticket ticket = new Ticket();
@@ -26,31 +26,34 @@ public class Locker {
     }
 
     public Bag pickUp(Ticket ticket) {
-        if (!contains(ticket)) {
-            throw new InvalidTicketException();
+        Bag bag = bagMap.get(ticket);
+        if (bagMap.get(ticket) != null) {
+            bagMap.remove(ticket);
+            return bag;
         }
-        return bagMap.remove(ticket) ;
-    }
-
-
-    public boolean isFull() {
-        return size ==0;
+        throw new InvalidTicketException();
     }
 
     public boolean contains(Ticket ticket){
-        return bagMap.containsKey(ticket);
+        return bagMap.get(ticket) != null;
     }
 
     public  int getValidCapacity() {
         return size - bagMap.size();
     }
 
-    public boolean isAvailable() {
-        return getValidCapacity()>0;
-    }
+    public boolean isAvailable() { return getValidCapacity()>0; }
 
     public Bag find(Ticket ticket) {
         return bagMap.get(ticket);
+    }
+
+    public int getAllCapacity() {
+        return size;
+    }
+
+    public String getReport(){
+        return "\tL " + getValidCapacity()+" "+ size +"\n";
     }
 }
 

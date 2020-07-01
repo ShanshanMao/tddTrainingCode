@@ -90,30 +90,30 @@ TDD 课5题目：实现LockerRobotDirector查看统计报表
 
 Tasking
 
-Given  LockerRobotDirector管理一个LockerRobotManager，LockerRobotManager只管理两个Locker，并且locker的可用容量和容量分别为：0，3；2，4
+Given  LockerRobotDirector管理一个LockerRobotManager，LockerRobotManager只管理两个Locker，并且locker的可用容量和容量分别为：2，3；4，4
 When  LockerRobotDirector统计报表
-Then  报表内容：M 2 7
-                L 0 3
-                L 2 4
+Then  报表内容：M 6 7
+                L 2 3
+                L 4 4
 
-Given  LockerRobotDirector管理一个LockerRobotManager，LockerRobotManager管理一个Locker和一个PrimaryLockerRobot，Locker的可用容量和容量分别为：2，5；PrimaryLockerRobot管理一个Locker，Locker的可用容量和容量分别为：3，10
+Given  LockerRobotDirector管理一个LockerRobotManager，LockerRobotManager管理一个Locker和一个PrimaryLockerRobot，Locker的可用容量和容量分别为：4，5；PrimaryLockerRobot管理一个Locker，Locker的可用容量和容量分别为：9，10
 When  LockerRobotDirector统计报表
-Then  报表内容：M 5 15
-                L 2  5
-                R 3 10
-                  L 3 10
+Then  报表内容：M 13 15
+                L 4  5
+                R 9 10
+                  L 9 10
 
-Given  LockerRobotDirector管理一个LockerRobotManager，LockerRobotManager管理两个Robot，SmartLockerRobot和PrimaryLockerRobot，SmartLockerRobot管理一个Locker，Locker的可用容量和容量分别为：3，10；PrimaryLockerRobot管理一个Locker，Locker的可用容量和容量分别为：5，20
+Given  LockerRobotDirector管理一个LockerRobotManager，LockerRobotManager管理两个Robot，SmartLockerRobot和PrimaryLockerRobot，SmartLockerRobot管理一个Locker，Locker的可用容量和容量分别为：0，1；PrimaryLockerRobot管理一个Locker，Locker的可用容量和容量分别为：7，8
 When  LockerRobotDirector统计报表
-Then  报表内容：M 8  30
-                R 3 10
-                  L 3 10
-                R 5 20
-                  L 5 20
+Then  报表内容：M 7 9
+                R 0 1
+                  L 0 1
+                R 7 8
+                  L 7 8
 
 
-Given  LockerRobotDirector管理一个LockerRobotManager，LockerRobotManager只管理两个Locker，并且locker的可用容量和容量分别为：0，3；2，4。存在一个不被LockerRobotManage管理的Locker和PrimaryLockerRobot，其中Locker的可用容量和容量分别为：2  8；PrimaryLockerRobot管理一个Locker，Locker的可用容量和容量分别为：3，10
+Given  LockerRobotDirector管理一个LockerRobotManager，LockerRobotManager只管理两个Locker，并且locker的可用容量和容量分别为：2，3；4，4。存在一个不被LockerRobotManage管理的Locker，其中Locker的可用容量和容量分别为：7  8
 When  LockerRobotDirector统计报表
-Then   报表内容：M 2 7
-                 L 0 3
-                 L 2 4
+Then   报表内容：M 6 7
+                 L 2 3
+                 L 4 4

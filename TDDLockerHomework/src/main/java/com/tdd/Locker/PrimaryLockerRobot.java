@@ -11,7 +11,7 @@ public class PrimaryLockerRobot extends LockerRobot{
 
     public Ticket store(Bag myBag){
         for (Locker locker : lockers){
-            if (locker.isAvailable()){
+            if (locker.getValidCapacity()>0){
                 return locker.store(myBag);
             }
         }
